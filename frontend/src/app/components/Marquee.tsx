@@ -17,8 +17,8 @@ export function Marquee() {
   return (
     <div
       style={{
-        borderTop: "1px solid rgba(237,234,228,0.08)",
-        borderBottom: "1px solid rgba(237,234,228,0.08)",
+        borderTop: "1px solid #262626",
+        borderBottom: "1px solid #262626",
         padding: "1.2rem 0",
         overflow: "hidden",
         whiteSpace: "nowrap",
@@ -47,12 +47,12 @@ export function Marquee() {
                 fontSize: "0.875rem",
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
-                color: "#888480",
+                color: "#A1A1A1",
               }}
             >
               {item}
             </span>
-            <span style={{ color: "#C8FF47", fontSize: "0.6rem" }}>✦</span>
+            <span style={{ color: "#2F6BFF", fontSize: "0.6rem" }}>✦</span>
           </span>
         ))}
       </motion.div>

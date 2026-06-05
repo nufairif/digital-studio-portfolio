@@ -42,7 +42,7 @@ export function Hero() {
           width: "60vw",
           height: "60vw",
           background:
-            "radial-gradient(circle, rgba(200,255,71,0.06) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(47,107,255,0.08) 0%, transparent 70%)",
           borderRadius: "50%",
           transform: "translateX(-50%)",
           pointerEvents: "none",
@@ -68,16 +68,16 @@ export function Hero() {
             width: 7,
             height: 7,
             borderRadius: "50%",
-            background: "#C8FF47",
+            background: "#2F6BFF",
             display: "inline-block",
-            boxShadow: "0 0 8px #C8FF47",
+            boxShadow: "0 0 8px #2F6BFF",
           }}
         />
         <span
           style={{
             fontFamily: "'JetBrains Mono', monospace",
             fontSize: "0.72rem",
-            color: "#888480",
+            color: "#A1A1A1",
             letterSpacing: "0.1em",
             textTransform: "uppercase",
           }}
@@ -97,13 +97,13 @@ export function Hero() {
             fontSize: "clamp(3.5rem, 9vw, 9rem)",
             lineHeight: 0.92,
             letterSpacing: "-0.04em",
-            color: "#EDEAE4",
+            color: "#FFFFFF",
             margin: 0,
             maxWidth: "1100px",
           }}
         >
           We craft{" "}
-          <em style={{ fontStyle: "italic", color: "#C8FF47", fontWeight: 700 }}>
+          <em style={{ fontStyle: "italic", color: "#2F6BFF", fontWeight: 700 }}>
             digital
           </em>
           <br />
@@ -126,7 +126,7 @@ export function Hero() {
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 300,
               fontSize: "clamp(0.95rem, 1.5vw, 1.15rem)",
-              color: "#888480",
+              color: "#A1A1A1",
               lineHeight: 1.6,
               maxWidth: "380px",
               margin: 0,
@@ -156,9 +156,9 @@ export function Hero() {
             fontWeight: 500,
             fontSize: "0.875rem",
             letterSpacing: "0.05em",
-            color: "#EDEAE4",
+            color: "#FFFFFF",
             background: "none",
-            border: "1px solid rgba(237,234,228,0.2)",
+            border: "1px solid #262626",
             borderRadius: "2rem",
             padding: "0.8rem 2rem",
             cursor: "pointer",
@@ -170,10 +170,10 @@ export function Hero() {
             transition: "border-color 0.2s",
           }}
           onMouseEnter={(e) =>
-            (e.currentTarget.style.borderColor = "rgba(237,234,228,0.6)")
+            (e.currentTarget.style.borderColor = "#FFFFFF")
           }
           onMouseLeave={(e) =>
-            (e.currentTarget.style.borderColor = "rgba(237,234,228,0.2)")
+            (e.currentTarget.style.borderColor = "#262626")
           }
         >
           View Work ↓
@@ -202,14 +202,14 @@ export function Hero() {
           style={{
             width: 1,
             height: "3rem",
-            background: "linear-gradient(to bottom, #C8FF47, transparent)",
+            background: "linear-gradient(to bottom, #2F6BFF, transparent)",
           }}
         />
         <span
           style={{
             fontFamily: "'JetBrains Mono', monospace",
             fontSize: "0.65rem",
-            color: "#888480",
+            color: "#A1A1A1",
             letterSpacing: "0.1em",
             writingMode: "vertical-rl",
             textTransform: "uppercase",

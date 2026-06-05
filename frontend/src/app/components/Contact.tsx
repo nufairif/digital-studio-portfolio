@@ -22,7 +22,7 @@ export function Contact() {
       id="contact"
       style={{
         padding: "6rem 2.5rem",
-        borderTop: "1px solid rgba(237,234,228,0.08)",
+        borderTop: "1px solid #262626",
       }}
     >
       <div
@@ -44,7 +44,7 @@ export function Contact() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.7rem",
-              color: "#C8FF47",
+              color: "#2F6BFF",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
               display: "block",
@@ -58,7 +58,7 @@ export function Contact() {
               fontFamily: "'Bricolage Grotesque', sans-serif",
               fontWeight: 800,
               fontSize: "clamp(2.5rem, 4.5vw, 4rem)",
-              color: "#EDEAE4",
+              color: "#FFFFFF",
               margin: "0 0 2rem",
               letterSpacing: "-0.03em",
               lineHeight: 1,
@@ -66,7 +66,7 @@ export function Contact() {
           >
             Start a
             <br />
-            <em style={{ fontStyle: "italic", color: "#C8FF47" }}>project</em>
+            <em style={{ fontStyle: "italic", color: "#2F6BFF" }}>project</em>
             <br />
             with us.
           </h2>
@@ -76,7 +76,7 @@ export function Contact() {
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 300,
               fontSize: "0.95rem",
-              color: "#888480",
+              color: "#A1A1A1",
               lineHeight: 1.7,
               marginBottom: "3rem",
             }}
@@ -98,7 +98,7 @@ export function Contact() {
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: "0.65rem",
-                    color: "#888480",
+                    color: "#A1A1A1",
                     letterSpacing: "0.1em",
                     textTransform: "uppercase",
                     marginBottom: "0.3rem",
@@ -110,7 +110,7 @@ export function Contact() {
                   style={{
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: "0.95rem",
-                    color: "#EDEAE4",
+                    color: "#FFFFFF",
                   }}
                 >
                   {value}
@@ -145,7 +145,7 @@ export function Contact() {
                   width: "4rem",
                   height: "4rem",
                   borderRadius: "50%",
-                  background: "#C8FF47",
+                  background: "#2F6BFF",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -159,7 +159,7 @@ export function Contact() {
                   fontFamily: "'Bricolage Grotesque', sans-serif",
                   fontWeight: 700,
                   fontSize: "2rem",
-                  color: "#EDEAE4",
+                  color: "#FFFFFF",
                   margin: 0,
                   letterSpacing: "-0.02em",
                 }}
@@ -169,7 +169,7 @@ export function Contact() {
               <p
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
-                  color: "#888480",
+                  color: "#A1A1A1",
                   maxWidth: "320px",
                   lineHeight: 1.6,
                   fontSize: "0.9rem",
@@ -200,7 +200,7 @@ export function Contact() {
                     style={{
                       fontFamily: "'JetBrains Mono', monospace",
                       fontSize: "0.65rem",
-                      color: "#888480",
+                      color: "#A1A1A1",
                       letterSpacing: "0.1em",
                       textTransform: "uppercase",
                       display: "block",
@@ -221,9 +221,9 @@ export function Contact() {
                       width: "100%",
                       fontFamily: "'DM Sans', sans-serif",
                       fontSize: "0.9rem",
-                      color: "#EDEAE4",
-                      background: "#111111",
-                      border: "1px solid rgba(237,234,228,0.1)",
+                      color: "#FFFFFF",
+                      background: "#141414",
+                      border: "1px solid #262626",
                       borderRadius: "0.5rem",
                       padding: "0.85rem 1rem",
                       outline: "none",
@@ -232,11 +232,11 @@ export function Contact() {
                     }}
                     onFocus={(e) =>
                       (e.currentTarget.style.borderColor =
-                        "rgba(200,255,71,0.4)")
+                        "rgba(47,107,255,0.45)")
                     }
                     onBlur={(e) =>
                       (e.currentTarget.style.borderColor =
-                        "rgba(237,234,228,0.1)")
+                        "#262626")
                     }
                   />
                 </div>
@@ -245,7 +245,7 @@ export function Contact() {
                     style={{
                       fontFamily: "'JetBrains Mono', monospace",
                       fontSize: "0.65rem",
-                      color: "#888480",
+                      color: "#A1A1A1",
                       letterSpacing: "0.1em",
                       textTransform: "uppercase",
                       display: "block",
@@ -266,9 +266,9 @@ export function Contact() {
                       width: "100%",
                       fontFamily: "'DM Sans', sans-serif",
                       fontSize: "0.9rem",
-                      color: "#EDEAE4",
-                      background: "#111111",
-                      border: "1px solid rgba(237,234,228,0.1)",
+                      color: "#FFFFFF",
+                      background: "#141414",
+                      border: "1px solid #262626",
                       borderRadius: "0.5rem",
                       padding: "0.85rem 1rem",
                       outline: "none",
@@ -277,11 +277,11 @@ export function Contact() {
                     }}
                     onFocus={(e) =>
                       (e.currentTarget.style.borderColor =
-                        "rgba(200,255,71,0.4)")
+                        "rgba(47,107,255,0.45)")
                     }
                     onBlur={(e) =>
                       (e.currentTarget.style.borderColor =
-                        "rgba(237,234,228,0.1)")
+                        "#262626")
                     }
                   />
                 </div>
@@ -293,7 +293,7 @@ export function Contact() {
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: "0.65rem",
-                    color: "#888480",
+                    color: "#A1A1A1",
                     letterSpacing: "0.1em",
                     textTransform: "uppercase",
                     display: "block",
@@ -315,12 +315,12 @@ export function Contact() {
                         fontSize: "0.82rem",
                         padding: "0.5rem 1.1rem",
                         borderRadius: "2rem",
-                        border: `1px solid ${formData.budget === b ? "#C8FF47" : "rgba(237,234,228,0.1)"}`,
+                        border: `1px solid ${formData.budget === b ? "#2F6BFF" : "#262626"}`,
                         background:
                           formData.budget === b
-                            ? "rgba(200,255,71,0.1)"
+                            ? "rgba(47,107,255,0.14)"
                             : "transparent",
-                        color: formData.budget === b ? "#C8FF47" : "#888480",
+                        color: formData.budget === b ? "#2F6BFF" : "#A1A1A1",
                         cursor: "pointer",
                         transition: "all 0.2s",
                       }}
@@ -337,7 +337,7 @@ export function Contact() {
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: "0.65rem",
-                    color: "#888480",
+                    color: "#A1A1A1",
                     letterSpacing: "0.1em",
                     textTransform: "uppercase",
                     display: "block",
@@ -358,9 +358,9 @@ export function Contact() {
                     width: "100%",
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: "0.9rem",
-                    color: "#EDEAE4",
-                    background: "#111111",
-                    border: "1px solid rgba(237,234,228,0.1)",
+                    color: "#FFFFFF",
+                    background: "#141414",
+                    border: "1px solid #262626",
                     borderRadius: "0.5rem",
                     padding: "0.85rem 1rem",
                     outline: "none",
@@ -370,11 +370,11 @@ export function Contact() {
                     lineHeight: 1.6,
                   }}
                   onFocus={(e) =>
-                    (e.currentTarget.style.borderColor = "rgba(200,255,71,0.4)")
+                    (e.currentTarget.style.borderColor = "rgba(47,107,255,0.45)")
                   }
                   onBlur={(e) =>
                     (e.currentTarget.style.borderColor =
-                      "rgba(237,234,228,0.1)")
+                      "#262626")
                   }
                 />
               </div>
@@ -386,8 +386,8 @@ export function Contact() {
                   fontWeight: 600,
                   fontSize: "0.9rem",
                   letterSpacing: "0.04em",
-                  color: "#0A0A0A",
-                  background: "#C8FF47",
+                  color: "#FFFFFF",
+                  background: "#2F6BFF",
                   border: "none",
                   borderRadius: "0.5rem",
                   padding: "1rem",

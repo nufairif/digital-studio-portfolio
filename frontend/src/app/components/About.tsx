@@ -13,7 +13,7 @@ export function About() {
       id="about"
       style={{
         padding: "6rem 2.5rem",
-        borderTop: "1px solid rgba(237,234,228,0.08)",
+        borderTop: "1px solid #262626",
       }}
     >
       <div
@@ -36,7 +36,7 @@ export function About() {
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: "0.7rem",
-                color: "#C8FF47",
+                color: "#2F6BFF",
                 letterSpacing: "0.12em",
                 textTransform: "uppercase",
                 display: "block",
@@ -50,7 +50,7 @@ export function About() {
                 fontFamily: "'Bricolage Grotesque', sans-serif",
                 fontWeight: 800,
                 fontSize: "clamp(2.5rem, 4vw, 3.5rem)",
-                color: "#EDEAE4",
+                color: "#FFFFFF",
                 margin: "0 0 2.5rem",
                 letterSpacing: "-0.03em",
                 lineHeight: 1,
@@ -85,7 +85,7 @@ export function About() {
                     fontFamily: "'DM Sans', sans-serif",
                     fontWeight: 300,
                     fontSize: "1rem",
-                    color: "#888480",
+                    color: "#A1A1A1",
                     lineHeight: 1.75,
                     margin: 0,
                   }}
@@ -108,7 +108,7 @@ export function About() {
               gap: "1.5rem",
               marginTop: "4rem",
               paddingTop: "3rem",
-              borderTop: "1px solid rgba(237,234,228,0.08)",
+              borderTop: "1px solid #262626",
             }}
           >
             {stats.map((stat) => (
@@ -118,7 +118,7 @@ export function About() {
                     fontFamily: "'Bricolage Grotesque', sans-serif",
                     fontWeight: 800,
                     fontSize: "3rem",
-                    color: "#EDEAE4",
+                    color: "#FFFFFF",
                     letterSpacing: "-0.04em",
                     lineHeight: 1,
                     marginBottom: "0.4rem",
@@ -130,7 +130,7 @@ export function About() {
                   style={{
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: "0.8rem",
-                    color: "#888480",
+                    color: "#A1A1A1",
                     letterSpacing: "0.04em",
                   }}
                 >
@@ -154,7 +154,7 @@ export function About() {
               borderRadius: "0.75rem",
               overflow: "hidden",
               aspectRatio: "4/5",
-              background: "#111111",
+              background: "#141414",
             }}
           >
             <img
@@ -186,7 +186,7 @@ export function About() {
               transform: "translateX(-50%)",
               background: "rgba(17,17,17,0.9)",
               backdropFilter: "blur(16px)",
-              border: "1px solid rgba(237,234,228,0.1)",
+              border: "1px solid #262626",
               borderRadius: "1rem",
               padding: "1.25rem 2rem",
               width: "calc(100% - 4rem)",
@@ -201,7 +201,7 @@ export function About() {
                   fontFamily: "'Bricolage Grotesque', sans-serif",
                   fontWeight: 700,
                   fontSize: "1rem",
-                  color: "#EDEAE4",
+                  color: "#FFFFFF",
                   marginBottom: "0.2rem",
                 }}
               >
@@ -211,7 +211,7 @@ export function About() {
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: "0.8rem",
-                  color: "#888480",
+                  color: "#A1A1A1",
                 }}
               >
                 Taking Q3 2026 projects
@@ -229,8 +229,8 @@ export function About() {
                   width: 8,
                   height: 8,
                   borderRadius: "50%",
-                  background: "#C8FF47",
-                  boxShadow: "0 0 8px #C8FF47",
+                  background: "#2F6BFF",
+                  boxShadow: "0 0 8px #2F6BFF",
                   display: "inline-block",
                 }}
               />
@@ -238,7 +238,7 @@ export function About() {
                 style={{
                   fontFamily: "'JetBrains Mono', monospace",
                   fontSize: "0.7rem",
-                  color: "#C8FF47",
+                  color: "#2F6BFF",
                   letterSpacing: "0.06em",
                 }}
               >

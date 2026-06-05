@@ -73,7 +73,7 @@ export function AboutPage() {
       <section
         style={{
           padding: "5rem 2.5rem 4rem",
-          borderBottom: "1px solid rgba(237,234,228,0.08)",
+          borderBottom: "1px solid #262626",
         }}
       >
         <motion.div
@@ -85,7 +85,7 @@ export function AboutPage() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.7rem",
-              color: "#C8FF47",
+              color: "#2F6BFF",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
               display: "block",
@@ -99,7 +99,7 @@ export function AboutPage() {
               fontFamily: "'Bricolage Grotesque', sans-serif",
               fontWeight: 800,
               fontSize: "clamp(3rem, 8vw, 7rem)",
-              color: "#EDEAE4",
+              color: "#FFFFFF",
               margin: "0 0 3rem",
               letterSpacing: "-0.04em",
               lineHeight: 0.92,
@@ -108,7 +108,7 @@ export function AboutPage() {
           >
             A studio built on
             <br />
-            <em style={{ fontStyle: "italic", color: "#C8FF47" }}>obsessive</em>
+            <em style={{ fontStyle: "italic", color: "#2F6BFF" }}>obsessive</em>
             <br />
             intentionality.
           </h1>
@@ -132,7 +132,7 @@ export function AboutPage() {
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 300,
               fontSize: "1.05rem",
-              color: "#EDEAE4",
+              color: "#FFFFFF",
               lineHeight: 1.75,
               margin: 0,
             }}
@@ -150,7 +150,7 @@ export function AboutPage() {
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 300,
               fontSize: "1.05rem",
-              color: "#888480",
+              color: "#A1A1A1",
               lineHeight: 1.75,
               margin: 0,
             }}
@@ -173,7 +173,7 @@ export function AboutPage() {
         style={{
           height: "60vh",
           overflow: "hidden",
-          background: "#111",
+          background: "#141414",
         }}
       >
         <img
@@ -192,7 +192,7 @@ export function AboutPage() {
       <section
         style={{
           padding: "5rem 2.5rem",
-          borderBottom: "1px solid rgba(237,234,228,0.08)",
+          borderBottom: "1px solid #262626",
         }}
       >
         <div
@@ -216,7 +216,7 @@ export function AboutPage() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
               style={{
-                borderLeft: "1px solid rgba(237,234,228,0.08)",
+                borderLeft: "1px solid #262626",
                 paddingLeft: "2rem",
               }}
             >
@@ -225,7 +225,7 @@ export function AboutPage() {
                   fontFamily: "'Bricolage Grotesque', sans-serif",
                   fontWeight: 800,
                   fontSize: "clamp(2.5rem, 4vw, 4rem)",
-                  color: "#EDEAE4",
+                  color: "#FFFFFF",
                   letterSpacing: "-0.04em",
                   lineHeight: 1,
                   marginBottom: "0.5rem",
@@ -237,7 +237,7 @@ export function AboutPage() {
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: "0.85rem",
-                  color: "#888480",
+                  color: "#A1A1A1",
                 }}
               >
                 {stat.label}
@@ -251,7 +251,7 @@ export function AboutPage() {
       <section
         style={{
           padding: "6rem 2.5rem",
-          borderBottom: "1px solid rgba(237,234,228,0.08)",
+          borderBottom: "1px solid #262626",
         }}
       >
         <motion.div
@@ -264,7 +264,7 @@ export function AboutPage() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.7rem",
-              color: "#C8FF47",
+              color: "#2F6BFF",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
               display: "block",
@@ -278,7 +278,7 @@ export function AboutPage() {
               fontFamily: "'Bricolage Grotesque', sans-serif",
               fontWeight: 800,
               fontSize: "clamp(2rem, 4vw, 3.5rem)",
-              color: "#EDEAE4",
+              color: "#FFFFFF",
               margin: 0,
               letterSpacing: "-0.03em",
             }}
@@ -311,13 +311,13 @@ export function AboutPage() {
                   marginBottom: "0.75rem",
                 }}
               >
-                <span style={{ color: "#C8FF47", fontSize: "0.5rem" }}>✦</span>
+                <span style={{ color: "#2F6BFF", fontSize: "0.5rem" }}>✦</span>
                 <h3
                   style={{
                     fontFamily: "'Bricolage Grotesque', sans-serif",
                     fontWeight: 700,
                     fontSize: "1.25rem",
-                    color: "#EDEAE4",
+                    color: "#FFFFFF",
                     margin: 0,
                     letterSpacing: "-0.02em",
                   }}
@@ -330,7 +330,7 @@ export function AboutPage() {
                   fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 300,
                   fontSize: "0.9rem",
-                  color: "#888480",
+                  color: "#A1A1A1",
                   lineHeight: 1.75,
                   margin: 0,
                 }}
@@ -346,7 +346,7 @@ export function AboutPage() {
       <section
         style={{
           padding: "6rem 2.5rem",
-          borderBottom: "1px solid rgba(237,234,228,0.08)",
+          borderBottom: "1px solid #262626",
         }}
       >
         <motion.div
@@ -359,7 +359,7 @@ export function AboutPage() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.7rem",
-              color: "#C8FF47",
+              color: "#2F6BFF",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
               display: "block",
@@ -373,7 +373,7 @@ export function AboutPage() {
               fontFamily: "'Bricolage Grotesque', sans-serif",
               fontWeight: 800,
               fontSize: "clamp(2rem, 4vw, 3.5rem)",
-              color: "#EDEAE4",
+              color: "#FFFFFF",
               margin: 0,
               letterSpacing: "-0.03em",
             }}
@@ -404,7 +404,7 @@ export function AboutPage() {
                   borderRadius: "0.75rem",
                   overflow: "hidden",
                   aspectRatio: "3/4",
-                  background: "#111",
+                  background: "#141414",
                   marginBottom: "1.25rem",
                 }}
               >
@@ -424,7 +424,7 @@ export function AboutPage() {
                   fontFamily: "'Bricolage Grotesque', sans-serif",
                   fontWeight: 700,
                   fontSize: "1.1rem",
-                  color: "#EDEAE4",
+                  color: "#FFFFFF",
                   margin: "0 0 0.2rem",
                   letterSpacing: "-0.02em",
                 }}
@@ -435,7 +435,7 @@ export function AboutPage() {
                 style={{
                   fontFamily: "'JetBrains Mono', monospace",
                   fontSize: "0.68rem",
-                  color: "#C8FF47",
+                  color: "#2F6BFF",
                   letterSpacing: "0.06em",
                   textTransform: "uppercase",
                   marginBottom: "0.5rem",
@@ -447,7 +447,7 @@ export function AboutPage() {
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: "0.82rem",
-                  color: "#888480",
+                  color: "#A1A1A1",
                   lineHeight: 1.6,
                   margin: 0,
                 }}
@@ -463,7 +463,7 @@ export function AboutPage() {
       <section
         style={{
           padding: "5rem 2.5rem",
-          borderBottom: "1px solid rgba(237,234,228,0.08)",
+          borderBottom: "1px solid #262626",
         }}
       >
         <motion.div
@@ -476,7 +476,7 @@ export function AboutPage() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.7rem",
-              color: "#888480",
+              color: "#A1A1A1",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
               display: "block",
@@ -501,27 +501,27 @@ export function AboutPage() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.06, duration: 0.5 }}
               style={{
-                border: "1px solid rgba(237,234,228,0.08)",
+                border: "1px solid #262626",
                 borderRadius: "0.5rem",
                 padding: "1.5rem",
                 textAlign: "center",
                 fontFamily: "'Bricolage Grotesque', sans-serif",
                 fontWeight: 600,
                 fontSize: "0.9rem",
-                color: "#888480",
+                color: "#A1A1A1",
                 letterSpacing: "-0.01em",
                 transition: "color 0.2s, border-color 0.2s",
                 cursor: "default",
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.color = "#EDEAE4";
+                (e.currentTarget as HTMLDivElement).style.color = "#FFFFFF";
                 (e.currentTarget as HTMLDivElement).style.borderColor =
-                  "rgba(237,234,228,0.2)";
+                  "#262626";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLDivElement).style.color = "#888480";
+                (e.currentTarget as HTMLDivElement).style.color = "#A1A1A1";
                 (e.currentTarget as HTMLDivElement).style.borderColor =
-                  "rgba(237,234,228,0.08)";
+                  "#262626";
               }}
             >
               {client}
@@ -548,7 +548,7 @@ export function AboutPage() {
               fontFamily: "'Bricolage Grotesque', sans-serif",
               fontWeight: 800,
               fontSize: "clamp(2.5rem, 5vw, 5rem)",
-              color: "#EDEAE4",
+              color: "#FFFFFF",
               margin: "0 0 2rem",
               letterSpacing: "-0.04em",
               lineHeight: 1,
@@ -562,8 +562,8 @@ export function AboutPage() {
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               fontSize: "0.9rem",
-              color: "#0A0A0A",
-              background: "#C8FF47",
+              color: "#FFFFFF",
+              background: "#2F6BFF",
               borderRadius: "2rem",
               padding: "0.9rem 2.5rem",
               textDecoration: "none",

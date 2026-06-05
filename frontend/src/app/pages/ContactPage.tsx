@@ -47,9 +47,9 @@ export function ContactPage() {
     width: "100%",
     fontFamily: "'DM Sans', sans-serif",
     fontSize: "0.9rem",
-    color: "#EDEAE4",
-    background: "#111111",
-    border: "1px solid rgba(237,234,228,0.1)",
+    color: "#FFFFFF",
+    background: "#141414",
+    border: "1px solid #262626",
     borderRadius: "0.5rem",
     padding: "0.9rem 1.1rem",
     outline: "none",
@@ -61,7 +61,7 @@ export function ContactPage() {
   const labelStyle: React.CSSProperties = {
     fontFamily: "'JetBrains Mono', monospace",
     fontSize: "0.65rem",
-    color: "#888480",
+    color: "#A1A1A1",
     letterSpacing: "0.1em",
     textTransform: "uppercase",
     display: "block",
@@ -93,7 +93,7 @@ export function ContactPage() {
               width: "5rem",
               height: "5rem",
               borderRadius: "50%",
-              background: "#C8FF47",
+              background: "#2F6BFF",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -108,7 +108,7 @@ export function ContactPage() {
               fontFamily: "'Bricolage Grotesque', sans-serif",
               fontWeight: 800,
               fontSize: "3rem",
-              color: "#EDEAE4",
+              color: "#FFFFFF",
               margin: "0 0 1rem",
               letterSpacing: "-0.03em",
             }}
@@ -120,7 +120,7 @@ export function ContactPage() {
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 300,
               fontSize: "1rem",
-              color: "#888480",
+              color: "#A1A1A1",
               lineHeight: 1.7,
               maxWidth: "380px",
               margin: "0 auto 2.5rem",
@@ -134,9 +134,9 @@ export function ContactPage() {
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: "0.85rem",
-              color: "#888480",
+              color: "#A1A1A1",
               background: "none",
-              border: "1px solid rgba(237,234,228,0.15)",
+              border: "1px solid #262626",
               borderRadius: "2rem",
               padding: "0.6rem 1.5rem",
               cursor: "pointer",
@@ -156,7 +156,7 @@ export function ContactPage() {
       <section
         style={{
           padding: "5rem 2.5rem 4rem",
-          borderBottom: "1px solid rgba(237,234,228,0.08)",
+          borderBottom: "1px solid #262626",
         }}
       >
         <motion.div
@@ -168,7 +168,7 @@ export function ContactPage() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.7rem",
-              color: "#C8FF47",
+              color: "#2F6BFF",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
               display: "block",
@@ -182,7 +182,7 @@ export function ContactPage() {
               fontFamily: "'Bricolage Grotesque', sans-serif",
               fontWeight: 800,
               fontSize: "clamp(3rem, 7vw, 6rem)",
-              color: "#EDEAE4",
+              color: "#FFFFFF",
               margin: "0 0 1.5rem",
               letterSpacing: "-0.04em",
               lineHeight: 0.92,
@@ -190,7 +190,7 @@ export function ContactPage() {
           >
             Let's start
             <br />
-            <em style={{ fontStyle: "italic", color: "#C8FF47" }}>something</em>
+            <em style={{ fontStyle: "italic", color: "#2F6BFF" }}>something</em>
             <br />
             great.
           </h1>
@@ -199,7 +199,7 @@ export function ContactPage() {
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 300,
               fontSize: "1rem",
-              color: "#888480",
+              color: "#A1A1A1",
               lineHeight: 1.7,
               maxWidth: "440px",
               margin: 0,
@@ -251,11 +251,11 @@ export function ContactPage() {
                   }
                   style={inputStyle}
                   onFocus={(e) =>
-                    (e.currentTarget.style.borderColor = "rgba(200,255,71,0.4)")
+                    (e.currentTarget.style.borderColor = "rgba(47,107,255,0.45)")
                   }
                   onBlur={(e) =>
                     (e.currentTarget.style.borderColor =
-                      "rgba(237,234,228,0.1)")
+                      "#262626")
                   }
                 />
               </div>
@@ -270,11 +270,11 @@ export function ContactPage() {
                   }
                   style={inputStyle}
                   onFocus={(e) =>
-                    (e.currentTarget.style.borderColor = "rgba(200,255,71,0.4)")
+                    (e.currentTarget.style.borderColor = "rgba(47,107,255,0.45)")
                   }
                   onBlur={(e) =>
                     (e.currentTarget.style.borderColor =
-                      "rgba(237,234,228,0.1)")
+                      "#262626")
                   }
                 />
               </div>
@@ -293,10 +293,10 @@ export function ContactPage() {
                 }
                 style={inputStyle}
                 onFocus={(e) =>
-                  (e.currentTarget.style.borderColor = "rgba(200,255,71,0.4)")
+                  (e.currentTarget.style.borderColor = "rgba(47,107,255,0.45)")
                 }
                 onBlur={(e) =>
-                  (e.currentTarget.style.borderColor = "rgba(237,234,228,0.1)")
+                  (e.currentTarget.style.borderColor = "#262626")
                 }
               />
             </div>
@@ -317,11 +317,11 @@ export function ContactPage() {
                         fontSize: "0.82rem",
                         padding: "0.5rem 1.1rem",
                         borderRadius: "2rem",
-                        border: `1px solid ${selected ? "#C8FF47" : "rgba(237,234,228,0.12)"}`,
+                        border: `1px solid ${selected ? "#2F6BFF" : "#262626"}`,
                         background: selected
-                          ? "rgba(200,255,71,0.1)"
+                          ? "rgba(47,107,255,0.14)"
                           : "transparent",
-                        color: selected ? "#C8FF47" : "#888480",
+                        color: selected ? "#2F6BFF" : "#A1A1A1",
                         cursor: "pointer",
                         transition: "all 0.2s",
                       }}
@@ -350,11 +350,11 @@ export function ContactPage() {
                         fontSize: "0.82rem",
                         padding: "0.5rem 1.1rem",
                         borderRadius: "2rem",
-                        border: `1px solid ${selected ? "#C8FF47" : "rgba(237,234,228,0.12)"}`,
+                        border: `1px solid ${selected ? "#2F6BFF" : "#262626"}`,
                         background: selected
-                          ? "rgba(200,255,71,0.1)"
+                          ? "rgba(47,107,255,0.14)"
                           : "transparent",
-                        color: selected ? "#C8FF47" : "#888480",
+                        color: selected ? "#2F6BFF" : "#A1A1A1",
                         cursor: "pointer",
                         transition: "all 0.2s",
                       }}
@@ -378,10 +378,10 @@ export function ContactPage() {
                 }
                 style={inputStyle}
                 onFocus={(e) =>
-                  (e.currentTarget.style.borderColor = "rgba(200,255,71,0.4)")
+                  (e.currentTarget.style.borderColor = "rgba(47,107,255,0.45)")
                 }
                 onBlur={(e) =>
-                  (e.currentTarget.style.borderColor = "rgba(237,234,228,0.1)")
+                  (e.currentTarget.style.borderColor = "#262626")
                 }
               />
             </div>
@@ -399,10 +399,10 @@ export function ContactPage() {
                 }
                 style={{ ...inputStyle, resize: "none" }}
                 onFocus={(e) =>
-                  (e.currentTarget.style.borderColor = "rgba(200,255,71,0.4)")
+                  (e.currentTarget.style.borderColor = "rgba(47,107,255,0.45)")
                 }
                 onBlur={(e) =>
-                  (e.currentTarget.style.borderColor = "rgba(237,234,228,0.1)")
+                  (e.currentTarget.style.borderColor = "#262626")
                 }
               />
             </div>
@@ -413,8 +413,8 @@ export function ContactPage() {
                 fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 600,
                 fontSize: "0.95rem",
-                color: "#0A0A0A",
-                background: "#C8FF47",
+                color: "#FFFFFF",
+                background: "#2F6BFF",
                 border: "none",
                 borderRadius: "0.5rem",
                 padding: "1.1rem",
@@ -451,8 +451,8 @@ export function ContactPage() {
             {/* Status card */}
             <div
               style={{
-                background: "#111111",
-                border: "1px solid rgba(237,234,228,0.08)",
+                background: "#141414",
+                border: "1px solid #262626",
                 borderRadius: "0.75rem",
                 padding: "2rem",
               }}
@@ -470,8 +470,8 @@ export function ContactPage() {
                     width: 8,
                     height: 8,
                     borderRadius: "50%",
-                    background: "#C8FF47",
-                    boxShadow: "0 0 8px #C8FF47",
+                    background: "#2F6BFF",
+                    boxShadow: "0 0 8px #2F6BFF",
                     display: "inline-block",
                   }}
                 />
@@ -479,7 +479,7 @@ export function ContactPage() {
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: "0.7rem",
-                    color: "#C8FF47",
+                    color: "#2F6BFF",
                     letterSpacing: "0.08em",
                   }}
                 >
@@ -491,7 +491,7 @@ export function ContactPage() {
                   fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 300,
                   fontSize: "0.875rem",
-                  color: "#888480",
+                  color: "#A1A1A1",
                   lineHeight: 1.65,
                   margin: 0,
                 }}
@@ -504,8 +504,8 @@ export function ContactPage() {
             {/* Contact details */}
             <div
               style={{
-                background: "#111111",
-                border: "1px solid rgba(237,234,228,0.08)",
+                background: "#141414",
+                border: "1px solid #262626",
                 borderRadius: "0.75rem",
                 padding: "2rem",
                 display: "flex",
@@ -524,7 +524,7 @@ export function ContactPage() {
                     style={{
                       fontFamily: "'JetBrains Mono', monospace",
                       fontSize: "0.62rem",
-                      color: "#888480",
+                      color: "#A1A1A1",
                       letterSpacing: "0.1em",
                       textTransform: "uppercase",
                       marginBottom: "0.35rem",
@@ -536,7 +536,7 @@ export function ContactPage() {
                     style={{
                       fontFamily: "'DM Sans', sans-serif",
                       fontSize: "0.9rem",
-                      color: "#EDEAE4",
+                      color: "#FFFFFF",
                     }}
                   >
                     {value}
@@ -548,8 +548,8 @@ export function ContactPage() {
             {/* Social */}
             <div
               style={{
-                background: "#111111",
-                border: "1px solid rgba(237,234,228,0.08)",
+                background: "#141414",
+                border: "1px solid #262626",
                 borderRadius: "0.75rem",
                 padding: "1.5rem 2rem",
               }}
@@ -562,7 +562,7 @@ export function ContactPage() {
                     style={{
                       fontFamily: "'DM Sans', sans-serif",
                       fontSize: "0.82rem",
-                      color: "#888480",
+                      color: "#A1A1A1",
                       background: "none",
                       border: "none",
                       cursor: "pointer",
@@ -570,10 +570,10 @@ export function ContactPage() {
                       transition: "color 0.2s",
                     }}
                     onMouseEnter={(e) =>
-                      (e.currentTarget.style.color = "#EDEAE4")
+                      (e.currentTarget.style.color = "#FFFFFF")
                     }
                     onMouseLeave={(e) =>
-                      (e.currentTarget.style.color = "#888480")
+                      (e.currentTarget.style.color = "#A1A1A1")
                     }
                   >
                     {s} ↗

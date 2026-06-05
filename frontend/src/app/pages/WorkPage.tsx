@@ -111,7 +111,7 @@ export function WorkPage() {
       <section
         style={{
           padding: "5rem 2.5rem 3rem",
-          borderBottom: "1px solid rgba(237,234,228,0.08)",
+          borderBottom: "1px solid #262626",
         }}
       >
         <motion.div
@@ -123,7 +123,7 @@ export function WorkPage() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.7rem",
-              color: "#C8FF47",
+              color: "#2F6BFF",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
               display: "block",
@@ -146,7 +146,7 @@ export function WorkPage() {
                 fontFamily: "'Bricolage Grotesque', sans-serif",
                 fontWeight: 800,
                 fontSize: "clamp(3rem, 7vw, 6rem)",
-                color: "#EDEAE4",
+                color: "#FFFFFF",
                 margin: 0,
                 letterSpacing: "-0.04em",
                 lineHeight: 0.95,
@@ -154,14 +154,14 @@ export function WorkPage() {
             >
               Selected
               <br />
-              <em style={{ fontStyle: "italic", color: "#C8FF47" }}>Work</em>
+              <em style={{ fontStyle: "italic", color: "#2F6BFF" }}>Work</em>
             </h1>
             <p
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 300,
                 fontSize: "0.95rem",
-                color: "#888480",
+                color: "#A1A1A1",
                 maxWidth: "340px",
                 lineHeight: 1.7,
                 margin: 0,
@@ -185,7 +185,7 @@ export function WorkPage() {
           display: "flex",
           gap: "0.5rem",
           flexWrap: "wrap",
-          borderBottom: "1px solid rgba(237,234,228,0.08)",
+          borderBottom: "1px solid #262626",
           overflowX: "auto",
         }}
       >
@@ -198,9 +198,9 @@ export function WorkPage() {
               fontSize: "0.8rem",
               padding: "0.45rem 1.1rem",
               borderRadius: "2rem",
-              border: `1px solid ${activeFilter === cat ? "#C8FF47" : "rgba(237,234,228,0.1)"}`,
-              background: activeFilter === cat ? "rgba(200,255,71,0.1)" : "transparent",
-              color: activeFilter === cat ? "#C8FF47" : "#888480",
+              border: `1px solid ${activeFilter === cat ? "#2F6BFF" : "#262626"}`,
+              background: activeFilter === cat ? "rgba(47,107,255,0.14)" : "transparent",
+              color: activeFilter === cat ? "#2F6BFF" : "#A1A1A1",
               cursor: "pointer",
               transition: "all 0.2s",
               whiteSpace: "nowrap",
@@ -215,7 +215,7 @@ export function WorkPage() {
             marginLeft: "auto",
             fontFamily: "'JetBrains Mono', monospace",
             fontSize: "0.7rem",
-            color: "#888480",
+            color: "#A1A1A1",
             alignSelf: "center",
             whiteSpace: "nowrap",
           }}
@@ -273,7 +273,7 @@ export function WorkPage() {
                 borderRadius: "0.75rem",
                 overflow: "hidden",
                 cursor: "pointer",
-                background: "#111111",
+                background: "#141414",
                 aspectRatio: "4/3",
                 gridColumn: project.featured ? "span 2" : "span 1",
               }}
@@ -316,8 +316,8 @@ export function WorkPage() {
                     style={{
                       fontFamily: "'JetBrains Mono', monospace",
                       fontSize: "0.62rem",
-                      color: "#0A0A0A",
-                      background: "#C8FF47",
+                      color: "#FFFFFF",
+                      background: "#2F6BFF",
                       borderRadius: "2rem",
                       minHeight: "2.1rem",
                       padding: "0 0.75rem",
@@ -336,13 +336,13 @@ export function WorkPage() {
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: "0.7rem",
-                    color: "#888480",
+                    color: "#A1A1A1",
                     background: "rgba(10,10,10,0.6)",
                     backdropFilter: "blur(8px)",
                     borderRadius: "2rem",
                     minHeight: "2.1rem",
                     padding: "0 0.75rem",
-                    border: "1px solid rgba(237,234,228,0.08)",
+                    border: "1px solid #262626",
                     lineHeight: 1,
                     display: "inline-flex",
                     alignItems: "center",
@@ -380,8 +380,8 @@ export function WorkPage() {
                       style={{
                         fontFamily: "'JetBrains Mono', monospace",
                         fontSize: "0.62rem",
-                        color: "#C8FF47",
-                        border: "1px solid rgba(200,255,71,0.3)",
+                        color: "#2F6BFF",
+                        border: "1px solid rgba(47,107,255,0.28)",
                         borderRadius: "2rem",
                         padding: "0.2rem 0.6rem",
                         letterSpacing: "0.04em",
@@ -396,7 +396,7 @@ export function WorkPage() {
                     fontFamily: "'Bricolage Grotesque', sans-serif",
                     fontWeight: 700,
                     fontSize: "clamp(1.1rem, 2vw, 1.5rem)",
-                    color: "#EDEAE4",
+                    color: "#FFFFFF",
                     margin: "0 0 0.2rem",
                     letterSpacing: "-0.02em",
                   }}
@@ -414,7 +414,7 @@ export function WorkPage() {
                     style={{
                       fontFamily: "'DM Sans', sans-serif",
                       fontSize: "0.8rem",
-                      color: "#888480",
+                      color: "#A1A1A1",
                       margin: 0,
                     }}
                   >
@@ -425,7 +425,7 @@ export function WorkPage() {
                       width: "2rem",
                       height: "2rem",
                       borderRadius: "50%",
-                      background: "#C8FF47",
+                      background: "#2F6BFF",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -450,7 +450,7 @@ export function WorkPage() {
               textAlign: "center",
               padding: "6rem 2rem",
               fontFamily: "'DM Sans', sans-serif",
-              color: "#888480",
+              color: "#A1A1A1",
               fontSize: "0.95rem",
             }}
           >
@@ -462,7 +462,7 @@ export function WorkPage() {
       {/* CTA */}
       <section
         style={{
-          borderTop: "1px solid rgba(237,234,228,0.08)",
+          borderTop: "1px solid #262626",
           padding: "5rem 2.5rem",
           textAlign: "center",
         }}
@@ -477,7 +477,7 @@ export function WorkPage() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.7rem",
-              color: "#C8FF47",
+              color: "#2F6BFF",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
               marginBottom: "1.5rem",
@@ -490,7 +490,7 @@ export function WorkPage() {
               fontFamily: "'Bricolage Grotesque', sans-serif",
               fontWeight: 800,
               fontSize: "clamp(2rem, 5vw, 4rem)",
-              color: "#EDEAE4",
+              color: "#FFFFFF",
               margin: "0 0 2rem",
               letterSpacing: "-0.03em",
             }}
@@ -503,8 +503,8 @@ export function WorkPage() {
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600,
               fontSize: "0.9rem",
-              color: "#0A0A0A",
-              background: "#C8FF47",
+              color: "#FFFFFF",
+              background: "#2F6BFF",
               borderRadius: "2rem",
               padding: "0.9rem 2.5rem",
               textDecoration: "none",

@@ -74,7 +74,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
         borderRadius: "0.75rem",
         overflow: "hidden",
         cursor: "pointer",
-        background: "#111111",
+        background: "#141414",
         aspectRatio: project.size === "large" ? "16/10" : "4/3",
       }}
     >
@@ -111,13 +111,13 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           right: "1.25rem",
           fontFamily: "'JetBrains Mono', monospace",
           fontSize: "0.7rem",
-          color: "#888480",
+          color: "#A1A1A1",
           letterSpacing: "0.08em",
           background: "rgba(10,10,10,0.6)",
           backdropFilter: "blur(8px)",
           borderRadius: "2rem",
           padding: "0.3rem 0.75rem",
-          border: "1px solid rgba(237,234,228,0.08)",
+          border: "1px solid #262626",
         }}
       >
         {project.year}
@@ -150,10 +150,10 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: "0.65rem",
-                color: "#C8FF47",
+                color: "#2F6BFF",
                 letterSpacing: "0.06em",
                 textTransform: "uppercase",
-                border: "1px solid rgba(200,255,71,0.3)",
+                border: "1px solid rgba(47,107,255,0.28)",
                 borderRadius: "2rem",
                 padding: "0.2rem 0.6rem",
               }}
@@ -168,7 +168,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
             fontFamily: "'Bricolage Grotesque', sans-serif",
             fontWeight: 700,
             fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)",
-            color: "#EDEAE4",
+            color: "#FFFFFF",
             margin: "0 0 0.25rem",
             letterSpacing: "-0.02em",
             lineHeight: 1.1,
@@ -180,7 +180,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: "0.8rem",
-            color: "#888480",
+            color: "#A1A1A1",
             margin: 0,
             letterSpacing: "0.04em",
           }}
@@ -198,7 +198,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           width: "2.2rem",
           height: "2.2rem",
           borderRadius: "50%",
-          background: "#C8FF47",
+          background: "#2F6BFF",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -236,7 +236,7 @@ export function Work() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.7rem",
-              color: "#C8FF47",
+              color: "#2F6BFF",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
               display: "block",
@@ -250,7 +250,7 @@ export function Work() {
               fontFamily: "'Bricolage Grotesque', sans-serif",
               fontWeight: 800,
               fontSize: "clamp(2.5rem, 5vw, 4rem)",
-              color: "#EDEAE4",
+              color: "#FFFFFF",
               margin: 0,
               letterSpacing: "-0.03em",
               lineHeight: 1,
@@ -265,9 +265,9 @@ export function Work() {
             fontFamily: "'DM Sans', sans-serif",
             fontWeight: 400,
             fontSize: "0.875rem",
-            color: "#888480",
+            color: "#A1A1A1",
             background: "none",
-            border: "1px solid rgba(237,234,228,0.12)",
+            border: "1px solid #262626",
             borderRadius: "2rem",
             padding: "0.6rem 1.5rem",
             cursor: "pointer",
@@ -275,12 +275,12 @@ export function Work() {
             transition: "color 0.2s, border-color 0.2s",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.color = "#EDEAE4";
-            e.currentTarget.style.borderColor = "rgba(237,234,228,0.3)";
+            e.currentTarget.style.color = "#FFFFFF";
+            e.currentTarget.style.borderColor = "#A1A1A1";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.color = "#888480";
-            e.currentTarget.style.borderColor = "rgba(237,234,228,0.12)";
+            e.currentTarget.style.color = "#A1A1A1";
+            e.currentTarget.style.borderColor = "#262626";
           }}
         >
           All Projects →

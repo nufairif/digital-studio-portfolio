@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer
       style={{
-        borderTop: "1px solid rgba(237,234,228,0.08)",
+        borderTop: "1px solid #262626",
         padding: "3rem 2.5rem",
         display: "flex",
         justifyContent: "space-between",
@@ -19,18 +19,18 @@ export function Footer() {
             fontFamily: "'Bricolage Grotesque', sans-serif",
             fontWeight: 700,
             fontSize: "1.1rem",
-            color: "#EDEAE4",
+            color: "#FFFFFF",
             letterSpacing: "-0.02em",
             marginBottom: "0.5rem",
           }}
         >
-          Matterlab<span style={{ color: "#C8FF47" }}></span>
+          Matterlab<span style={{ color: "#2F6BFF" }}></span>
         </div>
         <div
           style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: "0.8rem",
-            color: "#888480",
+            color: "#A1A1A1",
           }}
         >
           © 2026 Matterlab. All rights reserved.
@@ -44,14 +44,14 @@ export function Footer() {
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: "0.8rem",
-              color: "#888480",
+              color: "#A1A1A1",
               background: "none",
               border: "none",
               cursor: "pointer",
               transition: "color 0.2s",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "#EDEAE4")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "#888480")}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#FFFFFF")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#A1A1A1")}
           >
             {s}
           </button>
@@ -62,7 +62,7 @@ export function Footer() {
         style={{
           fontFamily: "'JetBrains Mono', monospace",
           fontSize: "0.65rem",
-          color: "#888480",
+          color: "#A1A1A1",
           letterSpacing: "0.08em",
           textTransform: "uppercase",
         }}

@@ -48,7 +48,7 @@ export function Navbar() {
           background: scrolled ? "rgba(10,10,10,0.92)" : "transparent",
           backdropFilter: scrolled ? "blur(16px)" : "none",
           borderBottom: scrolled
-            ? "1px solid rgba(237,234,228,0.07)"
+            ? "1px solid #262626"
             : "1px solid transparent",
           transition:
             "background 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease",
@@ -61,7 +61,7 @@ export function Navbar() {
             fontFamily: "'Bricolage Grotesque', sans-serif",
             fontWeight: 700,
             fontSize: "1.1rem",
-            color: "#EDEAE4",
+            color: "#FFFFFF",
             textDecoration: "none",
             letterSpacing: "-0.02em",
             display: "inline-flex",
@@ -71,7 +71,7 @@ export function Navbar() {
             flexShrink: 0,
           }}
         >
-          Matterlab<span style={{ color: "#C8FF47" }}></span>
+          Matterlab<span style={{ color: "#2F6BFF" }}></span>
         </Link>
 
         <div
@@ -94,17 +94,17 @@ export function Navbar() {
                   fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 400,
                   fontSize: "0.875rem",
-                  color: isActive(path) ? "#EDEAE4" : "#888480",
+                  color: isActive(path) ? "#FFFFFF" : "#A1A1A1",
                   textDecoration: "none",
                   letterSpacing: "0.02em",
                   transition: "color 0.2s",
                   position: "relative",
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#EDEAE4")}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#FFFFFF")}
                 onMouseLeave={(e) =>
                   (e.currentTarget.style.color = isActive(path)
-                    ? "#EDEAE4"
-                    : "#888480")
+                    ? "#FFFFFF"
+                    : "#A1A1A1")
                 }
               >
                 {label}
@@ -116,7 +116,7 @@ export function Navbar() {
                       left: 0,
                       right: 0,
                       height: "1px",
-                      background: "#C8FF47",
+                      background: "#2F6BFF",
                     }}
                   />
                 )}
@@ -132,8 +132,8 @@ export function Navbar() {
               fontSize: "0.8rem",
               letterSpacing: "0.06em",
               textTransform: "uppercase",
-              color: "#0A0A0A",
-              background: "#C8FF47",
+              color: "#FFFFFF",
+              background: "#2F6BFF",
               border: "none",
               borderRadius: "2rem",
               padding: "0.55rem 1.4rem",
@@ -174,7 +174,7 @@ export function Navbar() {
               style={{
                 width: 22,
                 height: 1.5,
-                background: "#EDEAE4",
+                background: "#FFFFFF",
                 display: "block",
               }}
             />
@@ -182,7 +182,7 @@ export function Navbar() {
               style={{
                 width: 22,
                 height: 1.5,
-                background: "#EDEAE4",
+                background: "#FFFFFF",
                 display: "block",
               }}
             />
@@ -190,7 +190,7 @@ export function Navbar() {
               style={{
                 width: 22,
                 height: 1.5,
-                background: "#EDEAE4",
+                background: "#FFFFFF",
                 display: "block",
               }}
             />
@@ -224,7 +224,7 @@ export function Navbar() {
                   fontFamily: "'Bricolage Grotesque', sans-serif",
                   fontWeight: 700,
                   fontSize: "3rem",
-                  color: "#EDEAE4",
+                  color: "#FFFFFF",
                   textDecoration: "none",
                 }}
               >

@@ -16,9 +16,9 @@ export default function App() {
         }
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: rgba(237,234,228,0.15); border-radius: 2px; }
-        ::-webkit-scrollbar-thumb:hover { background: rgba(237,234,228,0.3); }
-        ::selection { background: rgba(200,255,71,0.3); color: #EDEAE4; }
+        ::-webkit-scrollbar-thumb { background: #262626; border-radius: 2px; }
+        ::-webkit-scrollbar-thumb:hover { background: #A1A1A1; }
+        ::selection { background: rgba(47,107,255,0.28); color: #FFFFFF; }
       `}</style>
     </>
   );

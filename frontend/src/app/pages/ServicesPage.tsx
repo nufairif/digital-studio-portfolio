@@ -109,7 +109,7 @@ export function ServicesPage() {
       <section
         style={{
           padding: "5rem 2.5rem 4rem",
-          borderBottom: "1px solid rgba(237,234,228,0.08)",
+          borderBottom: "1px solid #262626",
         }}
       >
         <motion.div
@@ -121,7 +121,7 @@ export function ServicesPage() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.7rem",
-              color: "#C8FF47",
+              color: "#2F6BFF",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
               display: "block",
@@ -144,7 +144,7 @@ export function ServicesPage() {
                 fontFamily: "'Bricolage Grotesque', sans-serif",
                 fontWeight: 800,
                 fontSize: "clamp(3rem, 7vw, 6rem)",
-                color: "#EDEAE4",
+                color: "#FFFFFF",
                 margin: 0,
                 letterSpacing: "-0.04em",
                 lineHeight: 0.95,
@@ -152,14 +152,14 @@ export function ServicesPage() {
             >
               What we
               <br />
-              <em style={{ fontStyle: "italic", color: "#C8FF47" }}>do best.</em>
+              <em style={{ fontStyle: "italic", color: "#2F6BFF" }}>do best.</em>
             </h1>
             <p
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 300,
                 fontSize: "0.95rem",
-                color: "#888480",
+                color: "#A1A1A1",
                 maxWidth: "360px",
                 lineHeight: 1.75,
                 margin: 0,
@@ -193,9 +193,9 @@ export function ServicesPage() {
                 transition={{ delay: 0.1 + i * 0.07, duration: 0.5 }}
                 onClick={() => setActiveIndex(activeIndex === i ? null : i)}
                 style={{
-                  borderTop: "1px solid rgba(237,234,228,0.08)",
+                  borderTop: "1px solid #262626",
                   cursor: "pointer",
-                  borderLeft: activeIndex === i ? "2px solid #C8FF47" : "2px solid transparent",
+                  borderLeft: activeIndex === i ? "2px solid #2F6BFF" : "2px solid transparent",
                   paddingLeft: activeIndex === i ? "1.5rem" : "0",
                   transition: "border-color 0.3s, padding 0.3s",
                 }}
@@ -213,7 +213,7 @@ export function ServicesPage() {
                     style={{
                       fontFamily: "'JetBrains Mono', monospace",
                       fontSize: "0.72rem",
-                      color: activeIndex === i ? "#C8FF47" : "#888480",
+                      color: activeIndex === i ? "#2F6BFF" : "#A1A1A1",
                       letterSpacing: "0.06em",
                       paddingTop: "0.2rem",
                       transition: "color 0.3s",
@@ -228,7 +228,7 @@ export function ServicesPage() {
                         fontFamily: "'Bricolage Grotesque', sans-serif",
                         fontWeight: 700,
                         fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
-                        color: "#EDEAE4",
+                        color: "#FFFFFF",
                         margin: "0 0 0.2rem",
                         letterSpacing: "-0.02em",
                       }}
@@ -239,7 +239,7 @@ export function ServicesPage() {
                       style={{
                         fontFamily: "'DM Sans', sans-serif",
                         fontSize: "0.85rem",
-                        color: activeIndex === i ? "#C8FF47" : "#888480",
+                        color: activeIndex === i ? "#2F6BFF" : "#A1A1A1",
                         margin: 0,
                         transition: "color 0.3s",
                       }}
@@ -260,7 +260,7 @@ export function ServicesPage() {
                           fontFamily: "'DM Sans', sans-serif",
                           fontWeight: 300,
                           fontSize: "0.9rem",
-                          color: "#888480",
+                          color: "#A1A1A1",
                           lineHeight: 1.75,
                           margin: "1.25rem 0 1.5rem",
                           maxWidth: "520px",
@@ -285,13 +285,13 @@ export function ServicesPage() {
                             style={{
                               fontFamily: "'DM Sans', sans-serif",
                               fontSize: "0.82rem",
-                              color: "#888480",
+                              color: "#A1A1A1",
                               display: "flex",
                               gap: "0.5rem",
                               alignItems: "center",
                             }}
                           >
-                            <span style={{ color: "#C8FF47", fontSize: "0.5rem" }}>✦</span>
+                            <span style={{ color: "#2F6BFF", fontSize: "0.5rem" }}>✦</span>
                             {d}
                           </li>
                         ))}
@@ -303,7 +303,7 @@ export function ServicesPage() {
                           gap: "2rem",
                           flexWrap: "wrap",
                           paddingTop: "1rem",
-                          borderTop: "1px solid rgba(237,234,228,0.08)",
+                          borderTop: "1px solid #262626",
                         }}
                       >
                         {[
@@ -315,7 +315,7 @@ export function ServicesPage() {
                               style={{
                                 fontFamily: "'JetBrains Mono', monospace",
                                 fontSize: "0.62rem",
-                                color: "#888480",
+                                color: "#A1A1A1",
                                 letterSpacing: "0.08em",
                                 textTransform: "uppercase",
                                 marginBottom: "0.3rem",
@@ -328,7 +328,7 @@ export function ServicesPage() {
                                 fontFamily: "'Bricolage Grotesque', sans-serif",
                                 fontWeight: 600,
                                 fontSize: "1rem",
-                                color: "#EDEAE4",
+                                color: "#FFFFFF",
                               }}
                             >
                               {value}
@@ -342,8 +342,8 @@ export function ServicesPage() {
                             fontFamily: "'DM Sans', sans-serif",
                             fontWeight: 500,
                             fontSize: "0.82rem",
-                            color: "#0A0A0A",
-                            background: "#C8FF47",
+                            color: "#FFFFFF",
+                            background: "#2F6BFF",
                             borderRadius: "2rem",
                             padding: "0.5rem 1.4rem",
                             textDecoration: "none",
@@ -365,11 +365,11 @@ export function ServicesPage() {
                       width: "2.5rem",
                       height: "2.5rem",
                       borderRadius: "50%",
-                      border: `1px solid ${activeIndex === i ? "#C8FF47" : "rgba(237,234,228,0.15)"}`,
+                      border: `1px solid ${activeIndex === i ? "#2F6BFF" : "#262626"}`,
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      color: activeIndex === i ? "#C8FF47" : "#888480",
+                      color: activeIndex === i ? "#2F6BFF" : "#A1A1A1",
                       fontSize: "1.1rem",
                       transform: activeIndex === i ? "rotate(45deg)" : "rotate(0deg)",
                       transition: "transform 0.3s, color 0.3s, border-color 0.3s",
@@ -382,7 +382,7 @@ export function ServicesPage() {
                 </div>
               </motion.div>
             ))}
-            <div style={{ borderTop: "1px solid rgba(237,234,228,0.08)" }} />
+            <div style={{ borderTop: "1px solid #262626" }} />
           </div>
 
           {/* Sticky image preview */}
@@ -399,7 +399,7 @@ export function ServicesPage() {
                 borderRadius: "0.75rem",
                 overflow: "hidden",
                 aspectRatio: "4/3",
-                background: "#111",
+                background: "#141414",
               }}
             >
               <motion.img
@@ -417,16 +417,16 @@ export function ServicesPage() {
               style={{
                 marginTop: "1.5rem",
                 padding: "1.5rem",
-                background: "#111111",
+                background: "#141414",
                 borderRadius: "0.75rem",
-                border: "1px solid rgba(237,234,228,0.08)",
+                border: "1px solid #262626",
               }}
             >
               <div
                 style={{
                   fontFamily: "'JetBrains Mono', monospace",
                   fontSize: "0.65rem",
-                  color: "#888480",
+                  color: "#A1A1A1",
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
                   marginBottom: "0.5rem",
@@ -438,7 +438,7 @@ export function ServicesPage() {
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: "0.85rem",
-                  color: "#EDEAE4",
+                  color: "#FFFFFF",
                   lineHeight: 1.6,
                 }}
               >
@@ -453,7 +453,7 @@ export function ServicesPage() {
       <section
         style={{
           padding: "6rem 2.5rem",
-          borderTop: "1px solid rgba(237,234,228,0.08)",
+          borderTop: "1px solid #262626",
           marginTop: "4rem",
         }}
       >
@@ -468,7 +468,7 @@ export function ServicesPage() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.7rem",
-              color: "#C8FF47",
+              color: "#2F6BFF",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
               display: "block",
@@ -482,7 +482,7 @@ export function ServicesPage() {
               fontFamily: "'Bricolage Grotesque', sans-serif",
               fontWeight: 800,
               fontSize: "clamp(2rem, 4vw, 3.5rem)",
-              color: "#EDEAE4",
+              color: "#FFFFFF",
               margin: 0,
               letterSpacing: "-0.03em",
             }}
@@ -516,7 +516,7 @@ export function ServicesPage() {
                 style={{
                   fontFamily: "'JetBrains Mono', monospace",
                   fontSize: "0.7rem",
-                  color: "#C8FF47",
+                  color: "#2F6BFF",
                   letterSpacing: "0.08em",
                   marginBottom: "1rem",
                 }}
@@ -528,7 +528,7 @@ export function ServicesPage() {
                   fontFamily: "'Bricolage Grotesque', sans-serif",
                   fontWeight: 700,
                   fontSize: "1.3rem",
-                  color: "#EDEAE4",
+                  color: "#FFFFFF",
                   margin: "0 0 0.75rem",
                   letterSpacing: "-0.02em",
                 }}
@@ -540,7 +540,7 @@ export function ServicesPage() {
                   fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 300,
                   fontSize: "0.875rem",
-                  color: "#888480",
+                  color: "#A1A1A1",
                   lineHeight: 1.7,
                   margin: 0,
                 }}

@@ -47,7 +47,7 @@ export function Services() {
       id="services"
       style={{
         padding: "6rem 2.5rem",
-        borderTop: "1px solid rgba(237,234,228,0.08)",
+        borderTop: "1px solid #262626",
       }}
     >
       <motion.div
@@ -61,7 +61,7 @@ export function Services() {
           style={{
             fontFamily: "'JetBrains Mono', monospace",
             fontSize: "0.7rem",
-            color: "#C8FF47",
+            color: "#2F6BFF",
             letterSpacing: "0.12em",
             textTransform: "uppercase",
             display: "block",
@@ -75,7 +75,7 @@ export function Services() {
             fontFamily: "'Bricolage Grotesque', sans-serif",
             fontWeight: 800,
             fontSize: "clamp(2.5rem, 5vw, 4rem)",
-            color: "#EDEAE4",
+            color: "#FFFFFF",
             margin: 0,
             letterSpacing: "-0.03em",
             lineHeight: 1,
@@ -96,12 +96,12 @@ export function Services() {
             onMouseEnter={() => setActiveIndex(i)}
             onMouseLeave={() => setActiveIndex(null)}
             style={{
-              borderTop: "1px solid rgba(237,234,228,0.08)",
+              borderTop: "1px solid #262626",
               padding: "2rem 0",
               cursor: "pointer",
               transition: "padding 0.3s ease",
               paddingLeft: activeIndex === i ? "1.5rem" : "0",
-              borderLeft: activeIndex === i ? "2px solid #C8FF47" : "2px solid transparent",
+              borderLeft: activeIndex === i ? "2px solid #2F6BFF" : "2px solid transparent",
             }}
           >
             <div
@@ -116,7 +116,7 @@ export function Services() {
                 style={{
                   fontFamily: "'JetBrains Mono', monospace",
                   fontSize: "0.75rem",
-                  color: activeIndex === i ? "#C8FF47" : "#888480",
+                  color: activeIndex === i ? "#2F6BFF" : "#A1A1A1",
                   letterSpacing: "0.06em",
                   paddingTop: "0.2rem",
                   transition: "color 0.3s",
@@ -131,7 +131,7 @@ export function Services() {
                     fontFamily: "'Bricolage Grotesque', sans-serif",
                     fontWeight: 700,
                     fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
-                    color: "#EDEAE4",
+                    color: "#FFFFFF",
                     margin: "0 0 0.75rem",
                     letterSpacing: "-0.02em",
                   }}
@@ -151,7 +151,7 @@ export function Services() {
                       fontFamily: "'DM Sans', sans-serif",
                       fontWeight: 300,
                       fontSize: "0.95rem",
-                      color: "#888480",
+                      color: "#A1A1A1",
                       lineHeight: 1.7,
                       margin: "0 0 1rem",
                       maxWidth: "540px",
@@ -166,8 +166,8 @@ export function Services() {
                         style={{
                           fontFamily: "'JetBrains Mono', monospace",
                           fontSize: "0.65rem",
-                          color: "#888480",
-                          border: "1px solid rgba(237,234,228,0.1)",
+                          color: "#A1A1A1",
+                          border: "1px solid #262626",
                           borderRadius: "2rem",
                           padding: "0.25rem 0.7rem",
                           letterSpacing: "0.04em",
@@ -185,11 +185,11 @@ export function Services() {
                   width: "2.5rem",
                   height: "2.5rem",
                   borderRadius: "50%",
-                  border: `1px solid ${activeIndex === i ? "#C8FF47" : "rgba(237,234,228,0.15)"}`,
+                  border: `1px solid ${activeIndex === i ? "#2F6BFF" : "#262626"}`,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: activeIndex === i ? "#C8FF47" : "#888480",
+                  color: activeIndex === i ? "#2F6BFF" : "#A1A1A1",
                   fontSize: "1rem",
                   transform: activeIndex === i ? "rotate(45deg)" : "rotate(0deg)",
                   transition: "transform 0.3s ease, color 0.3s, border-color 0.3s",
@@ -202,7 +202,7 @@ export function Services() {
             </div>
           </motion.div>
         ))}
-        <div style={{ borderTop: "1px solid rgba(237,234,228,0.08)" }} />
+        <div style={{ borderTop: "1px solid #262626" }} />
       </div>
     </section>
   );
