@@ -1,0 +1,259 @@
+import { motion } from "motion/react";
+
+const stats = [
+  { value: "8+", label: "Years of craft" },
+  { value: "120+", label: "Projects shipped" },
+  { value: "40+", label: "Brands elevated" },
+  { value: "3", label: "Continents" },
+];
+
+export function About() {
+  return (
+    <section
+      id="about"
+      style={{
+        padding: "6rem 2.5rem",
+        borderTop: "1px solid rgba(237,234,228,0.08)",
+      }}
+    >
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "6rem",
+          alignItems: "start",
+        }}
+      >
+        {/* Left: Text */}
+        <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span
+              style={{
+                fontFamily: "'JetBrains Mono', monospace",
+                fontSize: "0.7rem",
+                color: "#C8FF47",
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                display: "block",
+                marginBottom: "0.75rem",
+              }}
+            >
+              Our Story
+            </span>
+            <h2
+              style={{
+                fontFamily: "'Bricolage Grotesque', sans-serif",
+                fontWeight: 800,
+                fontSize: "clamp(2.5rem, 4vw, 3.5rem)",
+                color: "#EDEAE4",
+                margin: "0 0 2.5rem",
+                letterSpacing: "-0.03em",
+                lineHeight: 1,
+              }}
+            >
+              Obsessively
+              <br />
+              intentional
+              <br />
+              design.
+            </h2>
+
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "1.25rem",
+              }}
+            >
+              {[
+                "We're Matterlab — a small team of designers and engineers who believe the best digital work comes from radical intentionality. No filler. No fluff. Just work that earns its place.",
+                "Founded in 2017, we've partnered with startups, cultural institutions, and global brands to create digital experiences that endure. Our process is collaborative, iterative, and deeply rooted in craft.",
+                "We're selective about what we take on — not because we're precious about it, but because great work demands full presence. If we're working on your project, we're fully committed.",
+              ].map((text, i) => (
+                <motion.p
+                  key={i}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: 300,
+                    fontSize: "1rem",
+                    color: "#888480",
+                    lineHeight: 1.75,
+                    margin: 0,
+                  }}
+                >
+                  {text}
+                </motion.p>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "1.5rem",
+              marginTop: "4rem",
+              paddingTop: "3rem",
+              borderTop: "1px solid rgba(237,234,228,0.08)",
+            }}
+          >
+            {stats.map((stat) => (
+              <div key={stat.label}>
+                <div
+                  style={{
+                    fontFamily: "'Bricolage Grotesque', sans-serif",
+                    fontWeight: 800,
+                    fontSize: "3rem",
+                    color: "#EDEAE4",
+                    letterSpacing: "-0.04em",
+                    lineHeight: 1,
+                    marginBottom: "0.4rem",
+                  }}
+                >
+                  {stat.value}
+                </div>
+                <div
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: "0.8rem",
+                    color: "#888480",
+                    letterSpacing: "0.04em",
+                  }}
+                >
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Right: Image + team */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          style={{ position: "relative" }}
+        >
+          <div
+            style={{
+              borderRadius: "0.75rem",
+              overflow: "hidden",
+              aspectRatio: "4/5",
+              background: "#111111",
+            }}
+          >
+            <img
+              src="https://images.unsplash.com/photo-1708778002477-75611274f23d?w=800&h=1000&fit=crop&auto=format"
+              alt="Studio workspace"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                display: "block",
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                background:
+                  "linear-gradient(to bottom, transparent 60%, rgba(10,10,10,0.6) 100%)",
+              }}
+            />
+          </div>
+
+          {/* Floating card */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: "2rem",
+              left: "50%",
+              transform: "translateX(-50%)",
+              background: "rgba(17,17,17,0.9)",
+              backdropFilter: "blur(16px)",
+              border: "1px solid rgba(237,234,228,0.1)",
+              borderRadius: "1rem",
+              padding: "1.25rem 2rem",
+              width: "calc(100% - 4rem)",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <div>
+              <div
+                style={{
+                  fontFamily: "'Bricolage Grotesque', sans-serif",
+                  fontWeight: 700,
+                  fontSize: "1rem",
+                  color: "#EDEAE4",
+                  marginBottom: "0.2rem",
+                }}
+              >
+                Currently Open
+              </div>
+              <div
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: "0.8rem",
+                  color: "#888480",
+                }}
+              >
+                Taking Q3 2026 projects
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5rem",
+              }}
+            >
+              <span
+                style={{
+                  width: 8,
+                  height: 8,
+                  borderRadius: "50%",
+                  background: "#C8FF47",
+                  boxShadow: "0 0 8px #C8FF47",
+                  display: "inline-block",
+                }}
+              />
+              <span
+                style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: "0.7rem",
+                  color: "#C8FF47",
+                  letterSpacing: "0.06em",
+                }}
+              >
+                Available
+              </span>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      <style>{`
+        @media (max-width: 900px) {
+          #about > div { grid-template-columns: 1fr !important; gap: 3rem !important; }
+        }
+      `}</style>
+    </section>
+  );
+}
