@@ -56,6 +56,7 @@ export function Navbar() {
       >
         <Link
           to="/"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           style={{
             fontFamily: "'Bricolage Grotesque', sans-serif",
             fontWeight: 700,
