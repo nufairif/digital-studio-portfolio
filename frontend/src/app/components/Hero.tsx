@@ -23,12 +23,13 @@ export function Hero() {
     <section
       ref={containerRef}
       id="hero"
+      className="hero-section"
       style={{
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-end",
-        padding: "8rem 2.5rem 5rem",
+        padding: "6rem 2.5rem 8rem",
         position: "relative",
         overflow: "hidden",
       }}
@@ -218,6 +219,14 @@ export function Hero() {
           Scroll
         </span>
       </motion.div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .hero-section {
+            padding: 7rem 1.25rem 5rem !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
