@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
-import { company } from "../data/ptsup";
+import { Link } from "react-router";
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -43,7 +43,7 @@ export function Hero() {
           width: "60vw",
           height: "60vw",
           background:
-            "radial-gradient(circle, rgba(255,102,0,0.08) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(47,107,255,0.08) 0%, transparent 70%)",
           borderRadius: "50%",
           transform: "translateX(-50%)",
           pointerEvents: "none",
@@ -69,21 +69,21 @@ export function Hero() {
             width: 7,
             height: 7,
             borderRadius: "50%",
-            background: "#FF6600",
+            background: "#2F6BFF",
             display: "inline-block",
-            boxShadow: "0 0 8px #FF6600",
+            boxShadow: "0 0 8px #2F6BFF",
           }}
         />
         <span
           style={{
             fontFamily: "'JetBrains Mono', monospace",
             fontSize: "0.72rem",
-            color: "#6B6B6B",
+            color: "#A1A1A1",
             letterSpacing: "0.1em",
             textTransform: "uppercase",
           }}
         >
-          {company.tagline}
+          Available for projects - 2026
         </span>
       </motion.div>
 
@@ -98,18 +98,19 @@ export function Hero() {
             fontSize: "clamp(3.5rem, 9vw, 9rem)",
             lineHeight: 0.92,
             letterSpacing: "-0.04em",
-            color: "#1A1A1A",
+            color: "#FFFFFF",
             margin: 0,
             maxWidth: "1100px",
           }}
         >
-          Solusi untuk
-          <br />
-          <em style={{ fontStyle: "italic", color: "#FF6600", fontWeight: 700 }}>
-            transformasi
+          We craft{" "}
+          <em style={{ fontStyle: "italic", color: "#2F6BFF", fontWeight: 700 }}>
+            digital
           </em>
           <br />
-          bisnis Anda.
+          experiences
+          <br />
+          that matter.
         </motion.h1>
 
         <motion.div
@@ -126,13 +127,14 @@ export function Hero() {
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 300,
               fontSize: "clamp(0.95rem, 1.5vw, 1.15rem)",
-              color: "#6B6B6B",
+              color: "#A1A1A1",
               lineHeight: 1.6,
               maxWidth: "380px",
               margin: 0,
             }}
           >
-            {company.description}
+            A multidisciplinary design and development studio building ambitious
+            digital products for forward-thinking brands.
           </p>
         </motion.div>
       </div>
@@ -148,16 +150,16 @@ export function Hero() {
           zIndex: 2,
         }}
       >
-        <a
-          href="#work"
+        <Link
+          to="/work"
           style={{
             fontFamily: "'DM Sans', sans-serif",
             fontWeight: 500,
             fontSize: "0.875rem",
             letterSpacing: "0.05em",
-            color: "#1A1A1A",
+            color: "#FFFFFF",
             background: "none",
-            border: "1px solid #E0E0E0",
+            border: "1px solid #262626",
             borderRadius: "2rem",
             padding: "0.8rem 2rem",
             cursor: "pointer",
@@ -169,14 +171,14 @@ export function Hero() {
             transition: "border-color 0.2s",
           }}
           onMouseEnter={(e) =>
-            (e.currentTarget.style.borderColor = "#FF6600")
+            (e.currentTarget.style.borderColor = "#FFFFFF")
           }
           onMouseLeave={(e) =>
-            (e.currentTarget.style.borderColor = "#E0E0E0")
+            (e.currentTarget.style.borderColor = "#262626")
           }
         >
-          Lihat Proyek ↓
-        </a>
+          View Work ↓
+        </Link>
       </motion.div>
 
       <motion.div
@@ -201,14 +203,14 @@ export function Hero() {
           style={{
             width: 1,
             height: "3rem",
-            background: "linear-gradient(to bottom, #FF6600, transparent)",
+            background: "linear-gradient(to bottom, #2F6BFF, transparent)",
           }}
         />
         <span
           style={{
             fontFamily: "'JetBrains Mono', monospace",
             fontSize: "0.65rem",
-            color: "#6B6B6B",
+            color: "#A1A1A1",
             letterSpacing: "0.1em",
             writingMode: "vertical-rl",
             textTransform: "uppercase",

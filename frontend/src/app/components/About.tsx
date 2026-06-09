@@ -1,5 +1,11 @@
 import { motion } from "motion/react";
-import { company, stats } from "../data/ptsup";
+
+const stats = [
+  { value: "8+", label: "Years of craft" },
+  { value: "120+", label: "Projects shipped" },
+  { value: "40+", label: "Brands elevated" },
+  { value: "3", label: "Continents" },
+];
 
 export function About() {
   return (
@@ -7,7 +13,7 @@ export function About() {
       id="about"
       style={{
         padding: "6rem 2.5rem",
-        borderTop: "1px solid #E0E0E0",
+        borderTop: "1px solid #262626",
       }}
     >
       <div
@@ -30,31 +36,31 @@ export function About() {
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: "0.7rem",
-                color: "#1A8B9D",
+                color: "#2F6BFF",
                 letterSpacing: "0.12em",
                 textTransform: "uppercase",
                 display: "block",
                 marginBottom: "0.75rem",
               }}
             >
-              Siapa Kami
+              Our Story
             </span>
             <h2
               style={{
                 fontFamily: "'Bricolage Grotesque', sans-serif",
                 fontWeight: 800,
                 fontSize: "clamp(2.5rem, 4vw, 3.5rem)",
-                color: "#1A1A1A",
+                color: "#FFFFFF",
                 margin: "0 0 2.5rem",
                 letterSpacing: "-0.03em",
                 lineHeight: 1,
               }}
             >
-              Penyedia Tenaga
+              Obsessively
               <br />
-              Alih Daya &
+              intentional
               <br />
-              Solusi Digital
+              design.
             </h2>
 
             <div
@@ -64,7 +70,11 @@ export function About() {
                 gap: "1.25rem",
               }}
             >
-              {company.about.map((text, i) => (
+              {[
+                "We're Matterlab — a small team of designers and engineers who believe the best digital work comes from radical intentionality. No filler. No fluff. Just work that earns its place.",
+                "Founded in 2017, we've partnered with startups, cultural institutions, and global brands to create digital experiences that endure. Our process is collaborative, iterative, and deeply rooted in craft.",
+                "We're selective about what we take on — not because we're precious about it, but because great work demands full presence. If we're working on your project, we're fully committed.",
+              ].map((text, i) => (
                 <motion.p
                   key={i}
                   initial={{ opacity: 0, y: 10 }}
@@ -75,7 +85,7 @@ export function About() {
                     fontFamily: "'DM Sans', sans-serif",
                     fontWeight: 300,
                     fontSize: "1rem",
-                    color: "#6B6B6B",
+                    color: "#A1A1A1",
                     lineHeight: 1.75,
                     margin: 0,
                   }}
@@ -98,7 +108,7 @@ export function About() {
               gap: "1.5rem",
               marginTop: "4rem",
               paddingTop: "3rem",
-              borderTop: "1px solid #E0E0E0",
+              borderTop: "1px solid #262626",
             }}
           >
             {stats.map((stat) => (
@@ -108,7 +118,7 @@ export function About() {
                     fontFamily: "'Bricolage Grotesque', sans-serif",
                     fontWeight: 800,
                     fontSize: "3rem",
-                    color: "#1A1A1A",
+                    color: "#FFFFFF",
                     letterSpacing: "-0.04em",
                     lineHeight: 1,
                     marginBottom: "0.4rem",
@@ -120,7 +130,7 @@ export function About() {
                   style={{
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: "0.8rem",
-                    color: "#6B6B6B",
+                    color: "#A1A1A1",
                     letterSpacing: "0.04em",
                   }}
                 >
@@ -144,12 +154,12 @@ export function About() {
               borderRadius: "0.75rem",
               overflow: "hidden",
               aspectRatio: "4/5",
-              background: "#F5F5F5",
+              background: "#141414",
             }}
           >
             <img
-              src="https://ptsup.co.id/wp-content/uploads/2025/01/SUP-1-scaled.png"
-              alt="PT Swadharma Utama Prima"
+              src="https://images.unsplash.com/photo-1708778002477-75611274f23d?w=800&h=1000&fit=crop&auto=format"
+              alt="Studio workspace"
               style={{
                 width: "100%",
                 height: "100%",
@@ -174,10 +184,9 @@ export function About() {
               bottom: "2rem",
               left: "50%",
               transform: "translateX(-50%)",
-              background: "rgba(255,255,255,0.95)",
+              background: "rgba(17,17,17,0.9)",
               backdropFilter: "blur(16px)",
-              boxShadow: "0 8px 32px rgba(0,0,0,0.1)",
-              border: "1px solid #E0E0E0",
+              border: "1px solid #262626",
               borderRadius: "1rem",
               padding: "1.25rem 2rem",
               width: "calc(100% - 4rem)",
@@ -192,20 +201,20 @@ export function About() {
                   fontFamily: "'Bricolage Grotesque', sans-serif",
                   fontWeight: 700,
                   fontSize: "1rem",
-                  color: "#1A1A1A",
+                  color: "#FFFFFF",
                   marginBottom: "0.2rem",
                 }}
               >
-                Konsultasi Gratis
+                Currently Open
               </div>
               <div
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: "0.8rem",
-                  color: "#6B6B6B",
+                  color: "#A1A1A1",
                 }}
               >
-                Diskusi kebutuhan bisnis Anda
+                Taking Q3 2026 projects
               </div>
             </div>
             <div
@@ -220,8 +229,8 @@ export function About() {
                   width: 8,
                   height: 8,
                   borderRadius: "50%",
-                  background: "#FF6600",
-                  boxShadow: "0 0 8px #FF6600",
+                  background: "#2F6BFF",
+                  boxShadow: "0 0 8px #2F6BFF",
                   display: "inline-block",
                 }}
               />
@@ -229,11 +238,11 @@ export function About() {
                 style={{
                   fontFamily: "'JetBrains Mono', monospace",
                   fontSize: "0.7rem",
-                  color: "#1A8B9D",
+                  color: "#2F6BFF",
                   letterSpacing: "0.06em",
                 }}
               >
-                Tersedia
+                Available
               </span>
             </div>
           </div>

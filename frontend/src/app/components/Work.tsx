@@ -1,6 +1,62 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { homeProjects as projects } from "../data/ptsup";
+
+const projects = [
+  {
+    id: 1,
+    title: "Luminary Brand",
+    category: "Brand Identity",
+    year: "2025",
+    tags: ["Identity", "Print", "Strategy"],
+    image: "https://images.unsplash.com/photo-1770591060040-25fd7d6a4c1f?w=900&h=700&fit=crop&auto=format",
+    size: "large",
+  },
+  {
+    id: 2,
+    title: "Vertex Platform",
+    category: "Web Design",
+    year: "2025",
+    tags: ["UX", "Web", "Motion"],
+    image: "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=700&h=700&fit=crop&auto=format",
+    size: "small",
+  },
+  {
+    id: 3,
+    title: "Aether Editorial",
+    category: "Art Direction",
+    year: "2024",
+    tags: ["Editorial", "Photography"],
+    image: "https://images.unsplash.com/photo-1532191568455-f90e2806b900?w=700&h=700&fit=crop&auto=format",
+    size: "small",
+  },
+  {
+    id: 4,
+    title: "Noir Architecture",
+    category: "Visual Identity",
+    year: "2024",
+    tags: ["Identity", "Signage"],
+    image: "https://images.unsplash.com/photo-1552821773-37cbce3a7965?w=900&h=700&fit=crop&auto=format",
+    size: "large",
+  },
+  {
+    id: 5,
+    title: "Pulse Motion",
+    category: "Motion Design",
+    year: "2025",
+    tags: ["Motion", "3D", "Brand"],
+    image: "https://images.unsplash.com/photo-1765539160785-e7953620488f?w=700&h=700&fit=crop&auto=format",
+    size: "small",
+  },
+  {
+    id: 6,
+    title: "Void Dashboard",
+    category: "Product Design",
+    year: "2024",
+    tags: ["Product", "UI", "UX"],
+    image: "https://images.unsplash.com/photo-1536675572774-1b66ac2e26e9?w=700&h=700&fit=crop&auto=format",
+    size: "small",
+  },
+];
 
 function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
   const [hovered, setHovered] = useState(false);
@@ -18,7 +74,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
         borderRadius: "0.75rem",
         overflow: "hidden",
         cursor: "pointer",
-        background: "#F5F5F5",
+        background: "#141414",
         aspectRatio: project.size === "large" ? "16/10" : "4/3",
       }}
     >
@@ -41,7 +97,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           position: "absolute",
           inset: 0,
           background: hovered
-            ? "linear-gradient(to top, rgba(255,255,255,0.92) 0%, rgba(10,10,10,0.2) 60%, transparent 100%)"
+            ? "linear-gradient(to top, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.2) 60%, transparent 100%)"
             : "linear-gradient(to top, rgba(10,10,10,0.7) 0%, rgba(10,10,10,0.05) 50%, transparent 100%)",
           transition: "background 0.4s ease",
         }}
@@ -55,13 +111,13 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           right: "1.25rem",
           fontFamily: "'JetBrains Mono', monospace",
           fontSize: "0.7rem",
-          color: "#6B6B6B",
+          color: "#A1A1A1",
           letterSpacing: "0.08em",
           background: "rgba(10,10,10,0.6)",
           backdropFilter: "blur(8px)",
           borderRadius: "2rem",
           padding: "0.3rem 0.75rem",
-          border: "1px solid #E0E0E0",
+          border: "1px solid #262626",
         }}
       >
         {project.year}
@@ -94,10 +150,10 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: "0.65rem",
-                color: "#FF6600",
+                color: "#2F6BFF",
                 letterSpacing: "0.06em",
                 textTransform: "uppercase",
-                border: "1px solid rgba(255,102,0,0.28)",
+                border: "1px solid rgba(47,107,255,0.28)",
                 borderRadius: "2rem",
                 padding: "0.2rem 0.6rem",
               }}
@@ -124,7 +180,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: "0.8rem",
-            color: "#6B6B6B",
+            color: "#A1A1A1",
             margin: 0,
             letterSpacing: "0.04em",
           }}
@@ -142,7 +198,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           width: "2.2rem",
           height: "2.2rem",
           borderRadius: "50%",
-          background: "#FF6600",
+          background: "#2F6BFF",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -180,21 +236,21 @@ export function Work() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.7rem",
-              color: "#1A8B9D",
+              color: "#2F6BFF",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
               display: "block",
               marginBottom: "0.75rem",
             }}
           >
-            Klien & Proyek
+            Selected Work
           </span>
           <h2
             style={{
               fontFamily: "'Bricolage Grotesque', sans-serif",
               fontWeight: 800,
               fontSize: "clamp(2.5rem, 5vw, 4rem)",
-              color: "#1A1A1A",
+              color: "#FFFFFF",
               margin: 0,
               letterSpacing: "-0.03em",
               lineHeight: 1,
@@ -209,9 +265,9 @@ export function Work() {
             fontFamily: "'DM Sans', sans-serif",
             fontWeight: 400,
             fontSize: "0.875rem",
-            color: "#6B6B6B",
+            color: "#A1A1A1",
             background: "none",
-            border: "1px solid #E0E0E0",
+            border: "1px solid #262626",
             borderRadius: "2rem",
             padding: "0.6rem 1.5rem",
             cursor: "pointer",
@@ -219,12 +275,12 @@ export function Work() {
             transition: "color 0.2s, border-color 0.2s",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.color = "#1A1A1A";
-            e.currentTarget.style.borderColor = "#6B6B6B";
+            e.currentTarget.style.color = "#FFFFFF";
+            e.currentTarget.style.borderColor = "#A1A1A1";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.color = "#6B6B6B";
-            e.currentTarget.style.borderColor = "#E0E0E0";
+            e.currentTarget.style.color = "#A1A1A1";
+            e.currentTarget.style.borderColor = "#262626";
           }}
         >
           All Projects →
