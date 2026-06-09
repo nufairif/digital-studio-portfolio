@@ -6,7 +6,7 @@ export function Root() {
   return (
     <div
       style={{
-        background: "#0A0A0A",
+        background: "#FFFFFF",
         minHeight: "100vh",
         fontFamily: "'DM Sans', sans-serif",
         overflowX: "hidden",

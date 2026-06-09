@@ -1,0 +1,16 @@
+export const colors = {
+  primary: "#FF6600",
+  primaryHover: "#E55C00",
+  primaryActive: "#CC5200",
+  secondary: "#1A8B9D",
+  bg: "#FFFFFF",
+  surface: "#F5F5F5",
+  text: "#1A1A1A",
+  textMuted: "#6B6B6B",
+  border: "#E0E0E0",
+  focusRing: "rgba(255,102,0,0.45)",
+  primaryMuted: "rgba(255,102,0,0.14)",
+  primaryBorder: "rgba(255,102,0,0.28)",
+  secondaryMuted: "rgba(26,139,157,0.14)",
+  glow: "rgba(255,102,0,0.08)",
+} as const;

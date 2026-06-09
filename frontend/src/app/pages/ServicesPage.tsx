@@ -1,107 +1,83 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router";
+import {
+  pageServices as services,
+  processSteps,
+  serviceCategories,
+  type ServiceCategory,
+  type ServiceItem,
+} from "../data/ptsup";
+import { useServiceModal } from "../components/ServiceItemModal";
 
-const services = [
-  {
-    number: "01",
-    title: "Brand & Identity",
-    tagline: "Systems that endure.",
-    description:
-      "Strategic brand systems built to last — from verbal identity and visual language to comprehensive brand guidelines that scale across every touchpoint.",
-    details: [
-      "Brand strategy and positioning",
-      "Logo and visual identity design",
-      "Typography and color systems",
-      "Brand guidelines and documentation",
-      "Print and collateral design",
-      "Brand voice and messaging",
-    ],
-    deliverables: "Brand Strategy, Logo Suite, Style Guide, Asset Library",
-    timeline: "6–10 weeks",
-    startingAt: "$18,000",
-    image: "https://images.unsplash.com/photo-1770591060040-25fd7d6a4c1f?w=800&h=600&fit=crop&auto=format",
-  },
-  {
-    number: "02",
-    title: "Web & Digital",
-    tagline: "Sites that perform.",
-    description:
-      "Immersive web experiences with thoughtful interactions. We design and develop sites that perform as well as they look — from concept to launch.",
-    details: [
-      "Website design and UX strategy",
-      "Frontend development (React, Next.js)",
-      "CMS integration (Sanity, Contentful)",
-      "Performance optimization",
-      "SEO foundations",
-      "Hosting and deployment",
-    ],
-    deliverables: "Wireframes, Design System, Codebase, CMS",
-    timeline: "8–14 weeks",
-    startingAt: "$24,000",
-    image: "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=800&h=600&fit=crop&auto=format",
-  },
-  {
-    number: "03",
-    title: "UI/UX Design",
-    tagline: "Interfaces that feel alive.",
-    description:
-      "Product design grounded in user research and systems thinking. We craft interfaces that feel intuitive and alive, from early sketches to polished handoffs.",
-    details: [
-      "User research and competitive analysis",
-      "Information architecture",
-      "Wireframing and prototyping",
-      "UI design and design systems",
-      "Usability testing",
-      "Dev-ready Figma handoff",
-    ],
-    deliverables: "Research Report, Wireframes, UI Kit, Prototype",
-    timeline: "6–12 weeks",
-    startingAt: "$20,000",
-    image: "https://images.unsplash.com/photo-1532191568455-f90e2806b900?w=800&h=600&fit=crop&auto=format",
-  },
-  {
-    number: "04",
-    title: "Motion & 3D",
-    tagline: "Brands in motion.",
-    description:
-      "Motion design that brings brands to life across digital and physical touchpoints — from micro-interactions to full-scale campaigns.",
-    details: [
-      "Brand motion guidelines",
-      "UI animation and micro-interactions",
-      "Explainer and promo videos",
-      "3D modeling and rendering",
-      "Social content and reels",
-      "After Effects and Lottie exports",
-    ],
-    deliverables: "Motion Guidelines, Animation Files, Video Assets",
-    timeline: "4–8 weeks",
-    startingAt: "$12,000",
-    image: "https://images.unsplash.com/photo-1765539160785-e7953620488f?w=800&h=600&fit=crop&auto=format",
-  },
-  {
-    number: "05",
-    title: "Creative Direction",
-    tagline: "Strategy meets craft.",
-    description:
-      "End-to-end art direction for campaigns, editorials, and brand launches. We bring strategy and craft together to create work that moves people.",
-    details: [
-      "Campaign concept and strategy",
-      "Art direction and styling",
-      "Photography and videography direction",
-      "Editorial design",
-      "Campaign asset production",
-      "Launch strategy",
-    ],
-    deliverables: "Creative Brief, Shot List, Direction Deck, Final Assets",
-    timeline: "4–12 weeks",
-    startingAt: "$15,000",
-    image: "https://images.unsplash.com/photo-1536675572774-1b66ac2e26e9?w=800&h=600&fit=crop&auto=format",
-  },
-];
+const detailToItem: Record<string, { category: string; item: string }> = {
+  "tenaga administrasi kompeten": { category: "Alih Daya", item: "Admin" },
+  "security berintegritas tinggi": { category: "Alih Daya", item: "Security" },
+  "tim sales berpengalaman": { category: "Alih Daya", item: "Sales" },
+  "driver andal dan aman": { category: "Alih Daya", item: "Driver" },
+  "cleaning service profesional": { category: "Alih Daya", item: "Cleaning Service" },
+  "sekretaris untuk dukungan manajerial": { category: "Alih Daya", item: "Sekretaris" },
+  "sistem informasi akademik": { category: "Solusi Digital", item: "Sistem Informasi Akademik" },
+  "customer relationship management (crm)": { category: "Solusi Digital", item: "CRM" },
+  "tracking management system": { category: "Solusi Digital", item: "Tracking Management" },
+  "pembuatan website profesional": { category: "Solusi Digital", item: "Pembuatan Website" },
+  "layanan pengantaran obat (supeer)": { category: "Solusi Digital", item: "Pengantaran Obat" },
+  "instalasi jaringan dan cctv": { category: "Solusi Digital", item: "Instalasi Teknologi" },
+  "maintenance gedung & rope access": { category: "Layanan Fasilitas", item: "Maintenance Gedung" },
+  "kebersihan unit dan ruang atm": { category: "Layanan Fasilitas", item: "Kebersihan ATM" },
+  "servis cuci dan perbaikan ac": { category: "Layanan Fasilitas", item: "Maintenance AC" },
+  "desain dan renovasi interior": { category: "Layanan Fasilitas", item: "Pembuatan Interior" },
+  "pembuatan dan perawatan reklame": { category: "Layanan Fasilitas", item: "Papan Reklame" },
+  "call center operasional": { category: "Solusi Digital", item: "CRM" },
+  "tele marketing": { category: "Solusi Digital", item: "CRM" },
+  "verification services": { category: "Solusi Digital", item: "CRM" },
+  "desk collection": { category: "Solusi Digital", item: "CRM" },
+  "pelaporan dan analitik": { category: "Solusi Digital", item: "CRM" },
+  "integrasi sistem crm": { category: "Solusi Digital", item: "CRM" },
+  "instalasi jaringan": { category: "Solusi Digital", item: "Instalasi Teknologi" },
+  "sistem cctv": { category: "Solusi Digital", item: "Instalasi Teknologi" },
+  "sistem akses ruangan": { category: "Solusi Digital", item: "Instalasi Teknologi" },
+  "mesin antrian": { category: "Solusi Digital", item: "Instalasi Teknologi" },
+  "maintenance berkala": { category: "Solusi Digital", item: "Instalasi Teknologi" },
+  "dukungan teknis": { category: "Solusi Digital", item: "Instalasi Teknologi" },
+};
+
+function findServiceItem(detailLabel: string): {
+  category: ServiceCategory;
+  item: ServiceItem;
+} | null {
+  const mapped = detailToItem[detailLabel.toLowerCase()];
+  if (mapped) {
+    const category = serviceCategories.find((cat) => cat.title === mapped.category);
+    const item = category?.items.find((sub) => sub.name === mapped.item);
+    if (category && item) return { category, item };
+  }
+
+  const normalized = detailLabel.toLowerCase();
+  for (const category of serviceCategories) {
+    for (const item of category.items) {
+      const itemName = item.name.toLowerCase();
+      if (normalized.includes(itemName) || itemName.includes(normalized)) {
+        return { category, item };
+      }
+    }
+  }
+
+  return null;
+}
+
+function categoryForServiceTitle(title: string): ServiceCategory | undefined {
+  const direct = serviceCategories.find((cat) => cat.title === title);
+  if (direct) return direct;
+  if (title.includes("CRM") || title.includes("Instalasi")) {
+    return serviceCategories.find((cat) => cat.title === "Solusi Digital");
+  }
+  return undefined;
+}
 
 export function ServicesPage() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
+  const { openCategory, openItem, modal } = useServiceModal();
 
   return (
     <main style={{ paddingTop: "4.5rem" }}>
@@ -109,7 +85,7 @@ export function ServicesPage() {
       <section
         style={{
           padding: "5rem 2.5rem 4rem",
-          borderBottom: "1px solid #262626",
+          borderBottom: "1px solid #E0E0E0",
         }}
       >
         <motion.div
@@ -121,7 +97,7 @@ export function ServicesPage() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.7rem",
-              color: "#2F6BFF",
+              color: "#FF6600",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
               display: "block",
@@ -144,7 +120,7 @@ export function ServicesPage() {
                 fontFamily: "'Bricolage Grotesque', sans-serif",
                 fontWeight: 800,
                 fontSize: "clamp(3rem, 7vw, 6rem)",
-                color: "#FFFFFF",
+                color: "#1A1A1A",
                 margin: 0,
                 letterSpacing: "-0.04em",
                 lineHeight: 0.95,
@@ -152,21 +128,22 @@ export function ServicesPage() {
             >
               What we
               <br />
-              <em style={{ fontStyle: "italic", color: "#2F6BFF" }}>do best.</em>
+              <em style={{ fontStyle: "italic", color: "#FF6600" }}>terbaik.</em>
             </h1>
             <p
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 300,
                 fontSize: "0.95rem",
-                color: "#A1A1A1",
+                color: "#6B6B6B",
                 maxWidth: "360px",
                 lineHeight: 1.75,
                 margin: 0,
               }}
             >
-              Five core capabilities, all executed with the same obsessive
-              attention to craft. We work across disciplines so you don't have to.
+              Tiga kategori layanan terintegrasi dalam satu mitra terpercaya —
+              alih daya, solusi digital, dan layanan fasilitas untuk bisnis Anda.
+              Klik item solusi pada accordion untuk membuka popup detail.
             </p>
           </div>
         </motion.div>
@@ -193,9 +170,9 @@ export function ServicesPage() {
                 transition={{ delay: 0.1 + i * 0.07, duration: 0.5 }}
                 onClick={() => setActiveIndex(activeIndex === i ? null : i)}
                 style={{
-                  borderTop: "1px solid #262626",
+                  borderTop: "1px solid #E0E0E0",
                   cursor: "pointer",
-                  borderLeft: activeIndex === i ? "2px solid #2F6BFF" : "2px solid transparent",
+                  borderLeft: activeIndex === i ? "2px solid #FF6600" : "2px solid transparent",
                   paddingLeft: activeIndex === i ? "1.5rem" : "0",
                   transition: "border-color 0.3s, padding 0.3s",
                 }}
@@ -213,7 +190,7 @@ export function ServicesPage() {
                     style={{
                       fontFamily: "'JetBrains Mono', monospace",
                       fontSize: "0.72rem",
-                      color: activeIndex === i ? "#2F6BFF" : "#A1A1A1",
+                      color: activeIndex === i ? "#FF6600" : "#6B6B6B",
                       letterSpacing: "0.06em",
                       paddingTop: "0.2rem",
                       transition: "color 0.3s",
@@ -228,7 +205,7 @@ export function ServicesPage() {
                         fontFamily: "'Bricolage Grotesque', sans-serif",
                         fontWeight: 700,
                         fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
-                        color: "#FFFFFF",
+                        color: "#1A1A1A",
                         margin: "0 0 0.2rem",
                         letterSpacing: "-0.02em",
                       }}
@@ -239,7 +216,7 @@ export function ServicesPage() {
                       style={{
                         fontFamily: "'DM Sans', sans-serif",
                         fontSize: "0.85rem",
-                        color: activeIndex === i ? "#2F6BFF" : "#A1A1A1",
+                        color: activeIndex === i ? "#FF6600" : "#6B6B6B",
                         margin: 0,
                         transition: "color 0.3s",
                       }}
@@ -260,7 +237,7 @@ export function ServicesPage() {
                           fontFamily: "'DM Sans', sans-serif",
                           fontWeight: 300,
                           fontSize: "0.9rem",
-                          color: "#A1A1A1",
+                          color: "#6B6B6B",
                           lineHeight: 1.75,
                           margin: "1.25rem 0 1.5rem",
                           maxWidth: "520px",
@@ -279,22 +256,49 @@ export function ServicesPage() {
                           gap: "0.5rem",
                         }}
                       >
-                        {service.details.map((d) => (
-                          <li
-                            key={d}
-                            style={{
-                              fontFamily: "'DM Sans', sans-serif",
-                              fontSize: "0.82rem",
-                              color: "#A1A1A1",
-                              display: "flex",
-                              gap: "0.5rem",
-                              alignItems: "center",
-                            }}
-                          >
-                            <span style={{ color: "#2F6BFF", fontSize: "0.5rem" }}>✦</span>
-                            {d}
-                          </li>
-                        ))}
+                        {service.details.map((d) => {
+                          const match = findServiceItem(d);
+                          return (
+                            <li key={d}>
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  if (match) {
+                                    openItem(match.category, match.item);
+                                  } else {
+                                    const cat = categoryForServiceTitle(service.title);
+                                    if (cat) openCategory(cat);
+                                  }
+                                }}
+                                style={{
+                                  fontFamily: "'DM Sans', sans-serif",
+                                  fontSize: "0.82rem",
+                                  color: "#6B6B6B",
+                                  display: "flex",
+                                  gap: "0.5rem",
+                                  alignItems: "center",
+                                  background: "none",
+                                  border: "none",
+                                  padding: 0,
+                                  cursor: "pointer",
+                                  textAlign: "left",
+                                  width: "100%",
+                                }}
+                                onMouseEnter={(e) => {
+                                  e.currentTarget.style.color = "#FF6600";
+                                }}
+                                onMouseLeave={(e) => {
+                                  e.currentTarget.style.color = "#6B6B6B";
+                                }}
+                              >
+                                <span style={{ color: "#FF6600", fontSize: "0.5rem" }}>✦</span>
+                                {d}
+                                <span style={{ marginLeft: "auto", fontSize: "0.72rem" }}>→</span>
+                              </button>
+                            </li>
+                          );
+                        })}
                       </ul>
 
                       <div
@@ -303,7 +307,7 @@ export function ServicesPage() {
                           gap: "2rem",
                           flexWrap: "wrap",
                           paddingTop: "1rem",
-                          borderTop: "1px solid #262626",
+                          borderTop: "1px solid #E0E0E0",
                         }}
                       >
                         {[
@@ -315,7 +319,7 @@ export function ServicesPage() {
                               style={{
                                 fontFamily: "'JetBrains Mono', monospace",
                                 fontSize: "0.62rem",
-                                color: "#A1A1A1",
+                                color: "#6B6B6B",
                                 letterSpacing: "0.08em",
                                 textTransform: "uppercase",
                                 marginBottom: "0.3rem",
@@ -328,7 +332,7 @@ export function ServicesPage() {
                                 fontFamily: "'Bricolage Grotesque', sans-serif",
                                 fontWeight: 600,
                                 fontSize: "1rem",
-                                color: "#FFFFFF",
+                                color: "#1A1A1A",
                               }}
                             >
                               {value}
@@ -343,7 +347,7 @@ export function ServicesPage() {
                             fontWeight: 500,
                             fontSize: "0.82rem",
                             color: "#FFFFFF",
-                            background: "#2F6BFF",
+                            background: "#FF6600",
                             borderRadius: "2rem",
                             padding: "0.5rem 1.4rem",
                             textDecoration: "none",
@@ -354,7 +358,7 @@ export function ServicesPage() {
                           onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.8")}
                           onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
                         >
-                          Inquire →
+                          Konsultasi →
                         </Link>
                       </div>
                     </div>
@@ -365,11 +369,11 @@ export function ServicesPage() {
                       width: "2.5rem",
                       height: "2.5rem",
                       borderRadius: "50%",
-                      border: `1px solid ${activeIndex === i ? "#2F6BFF" : "#262626"}`,
+                      border: `1px solid ${activeIndex === i ? "#FF6600" : "#E0E0E0"}`,
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      color: activeIndex === i ? "#2F6BFF" : "#A1A1A1",
+                      color: activeIndex === i ? "#FF6600" : "#6B6B6B",
                       fontSize: "1.1rem",
                       transform: activeIndex === i ? "rotate(45deg)" : "rotate(0deg)",
                       transition: "transform 0.3s, color 0.3s, border-color 0.3s",
@@ -382,7 +386,7 @@ export function ServicesPage() {
                 </div>
               </motion.div>
             ))}
-            <div style={{ borderTop: "1px solid #262626" }} />
+            <div style={{ borderTop: "1px solid #E0E0E0" }} />
           </div>
 
           {/* Sticky image preview */}
@@ -399,7 +403,7 @@ export function ServicesPage() {
                 borderRadius: "0.75rem",
                 overflow: "hidden",
                 aspectRatio: "4/3",
-                background: "#141414",
+                background: "#F5F5F5",
               }}
             >
               <motion.img
@@ -417,16 +421,16 @@ export function ServicesPage() {
               style={{
                 marginTop: "1.5rem",
                 padding: "1.5rem",
-                background: "#141414",
+                background: "#F5F5F5",
                 borderRadius: "0.75rem",
-                border: "1px solid #262626",
+                border: "1px solid #E0E0E0",
               }}
             >
               <div
                 style={{
                   fontFamily: "'JetBrains Mono', monospace",
                   fontSize: "0.65rem",
-                  color: "#A1A1A1",
+                  color: "#6B6B6B",
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
                   marginBottom: "0.5rem",
@@ -438,7 +442,7 @@ export function ServicesPage() {
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: "0.85rem",
-                  color: "#FFFFFF",
+                  color: "#1A1A1A",
                   lineHeight: 1.6,
                 }}
               >
@@ -453,8 +457,7 @@ export function ServicesPage() {
       <section
         style={{
           padding: "6rem 2.5rem",
-          borderTop: "1px solid #262626",
-          marginTop: "4rem",
+          borderTop: "1px solid #E0E0E0",
         }}
       >
         <motion.div
@@ -468,7 +471,7 @@ export function ServicesPage() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.7rem",
-              color: "#2F6BFF",
+              color: "#FF6600",
               letterSpacing: "0.12em",
               textTransform: "uppercase",
               display: "block",
@@ -482,7 +485,7 @@ export function ServicesPage() {
               fontFamily: "'Bricolage Grotesque', sans-serif",
               fontWeight: 800,
               fontSize: "clamp(2rem, 4vw, 3.5rem)",
-              color: "#FFFFFF",
+              color: "#1A1A1A",
               margin: 0,
               letterSpacing: "-0.03em",
             }}
@@ -499,12 +502,7 @@ export function ServicesPage() {
           }}
           className="process-grid"
         >
-          {[
-            { step: "01", title: "Discovery", desc: "We start by understanding your brand, goals, audience, and competitive landscape through a structured discovery process." },
-            { step: "02", title: "Strategy", desc: "Findings become a clear strategic foundation — positioning, messaging, and a creative direction that everyone aligns on before a pixel is pushed." },
-            { step: "03", title: "Design", desc: "We design in the open, sharing work early and often. Feedback loops are tight; surprises are rare." },
-            { step: "04", title: "Deliver", desc: "Final assets, handoffs, and documentation are meticulous. We don't disappear at launch — we're there for 30 days of support." },
-          ].map((item, i) => (
+          {processSteps.map((item, i) => (
             <motion.div
               key={item.step}
               initial={{ opacity: 0, y: 20 }}
@@ -516,7 +514,7 @@ export function ServicesPage() {
                 style={{
                   fontFamily: "'JetBrains Mono', monospace",
                   fontSize: "0.7rem",
-                  color: "#2F6BFF",
+                  color: "#FF6600",
                   letterSpacing: "0.08em",
                   marginBottom: "1rem",
                 }}
@@ -528,7 +526,7 @@ export function ServicesPage() {
                   fontFamily: "'Bricolage Grotesque', sans-serif",
                   fontWeight: 700,
                   fontSize: "1.3rem",
-                  color: "#FFFFFF",
+                  color: "#1A1A1A",
                   margin: "0 0 0.75rem",
                   letterSpacing: "-0.02em",
                 }}
@@ -540,7 +538,7 @@ export function ServicesPage() {
                   fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 300,
                   fontSize: "0.875rem",
-                  color: "#A1A1A1",
+                  color: "#6B6B6B",
                   lineHeight: 1.7,
                   margin: 0,
                 }}
@@ -551,6 +549,8 @@ export function ServicesPage() {
           ))}
         </div>
       </section>
+
+      {modal}
 
       <style>{`
         @media (max-width: 900px) {
